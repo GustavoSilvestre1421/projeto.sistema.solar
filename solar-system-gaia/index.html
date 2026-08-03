@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="gaia-build" content="1.0.2">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#061426">
+    <title>Sistema Solar 3D — Projeto Gaia</title>
+    <!-- Metadados Open Graph (Para WhatsApp, Facebook, Discord, Slack, etc) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sistema Solar 3D">
+    <meta property="og:description" content="Um simulador orbital interativo em 3D do Sistema Solar.">
+    <meta property="og:image" content="assets/images/gaia-share.jpg">
+
+    <!-- Metadados Twitter Cards (Para X / Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sistema Solar 3D">
+    <meta name="twitter:description" content="Um simulador orbital interativo em 3D do Sistema Solar.">
+    <meta name="twitter:image" content="assets/images/gaia-share.jpg">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="assets/icons/gaia-icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icons/gaia-icon-192.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Importando THREE.js via ES Modules -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./assets/vendor/three/three.module.js",
+                "three/addons/": "./assets/vendor/three/addons/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="bootScreen" class="boot-screen" role="dialog" aria-modal="true" aria-labelledby="bootTitle">
+        <div class="boot-stars" aria-hidden="true"></div>
+        <main class="boot-content">
+            <div class="gaia-mark" aria-hidden="true"><span></span><i></i></div>
+            <p class="boot-kicker" data-i18n="bootKicker">Iniciativa científica · Ano 2184</p>
+            <h1 id="bootTitle">PROJETO <strong>GAIA</strong></h1>
+            <p class="boot-subtitle" data-i18n="bootSubtitle">Sistema de exploração e conhecimento planetário</p>
+            <div class="boot-progress" aria-hidden="true"><span id="bootProgressBar"></span></div>
+            <div class="boot-status" role="status" aria-live="polite">
+                <span id="bootStatus" data-i18n="bootInitializing">Inicializando sistemas...</span>
+                <strong id="bootPercent">0%</strong>
+            </div>
+            <button id="btnEnterGaia" class="boot-enter" type="button" hidden data-i18n="enterSystem">Entrar no sistema</button>
+            <label class="boot-skip"><input id="skipIntroPreference" type="checkbox"> <span data-i18n="skipOpening">Pular esta abertura nas próximas visitas</span></label>
+            <small class="boot-version" data-i18n="releaseVersion">Versão 1.0.2</small>
+        </main>
+    </div>
+
+    <section id="missionHud" class="mission-hud" aria-live="polite" hidden>
+        <div class="mission-hud-header">
+            <span class="mission-hud-eyebrow" data-i18n="currentMission">Projeto Gaia · Missão atual</span>
+            <button id="btnEditProfile" class="commander-profile" type="button" title="Editar perfil" data-i18n-title="editProfile">
+                <span id="commanderHudAvatar" class="commander-avatar" aria-hidden="true"></span>
+                <span id="commanderHudName" data-i18n="commander">Comandante</span>
+            </button>
+        </div>
+        <h2 id="missionHudTitle" data-i18n="preparingMission">Preparando missão...</h2>
+        <p id="missionHudObjective"></p>
+        <div id="missionChapterLabel" class="mission-chapter-label"></div>
+        <p id="missionLanguageNotice" class="mission-language-notice" hidden></p>
+        <div class="mission-hud-stats">
+            <span>XP <strong id="missionHudXP">0</strong></span>
+            <span><span data-i18n="level">Nível</span> <strong id="missionHudLevel">Cadete</strong></span>
+            <span><span data-i18n="mission">Missão</span> <strong id="missionHudProgress">1/21</strong></span>
+        </div>
+        <div class="mission-campaign-progress" role="progressbar" aria-label="Progresso da campanha" data-i18n-aria-label="campaignProgress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="missionCampaignProgressBar"></span></div>
+        <div class="sound-controls">
+            <button id="btnToggleSound" type="button" aria-pressed="false" data-i18n="sound">Som</button>
+            <label><span data-i18n="volume">Volume</span> <input id="soundVolume" type="range" min="0" max="1" step="0.05" value="0.45"></label>
+        </div>
+        <button id="btnMissionFocus" class="mission-focus-button" type="button" hidden data-i18n="missionFocusDefault">Aproximar do sistema</button>
+        <button id="btnOpenJournal" class="journal-launcher" type="button" data-i18n="journal">Diário de Bordo</button>
+    </section>
+    <div id="xpGainEffect" class="xp-gain-effect" role="status" aria-live="polite"></div>
+
+    <!-- Seletor de Idioma -->
+    <div class="lang-selector-container">
+        <button id="btnOpenModeMenu" class="mode-menu-button" type="button" data-i18n="chooseMode">Escolher modo</button>
+        <button id="btnOpenCelestialNavigator" class="celestial-navigator-launcher" type="button" aria-haspopup="dialog">Navegador Celeste</button>
+        <select id="langSelect" aria-label="Idioma da interface" data-i18n-aria-label="languageLabel">
+            <option value="pt" selected>Português (BR)</option>
+            <option value="en">English (US)</option>
+            <option value="es">Español</option>
+        </select>
+    </div>
+
+    <div id="celestialNavigatorModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="celestialNavigatorTitle">
+        <div class="game-modal-card celestial-navigator-card">
+            <button id="btnCloseCelestialNavigator" class="modal-close-button" type="button" aria-label="Fechar navegador celeste">&times;</button>
+            <span id="celestialNavigatorEyebrow" class="game-modal-eyebrow">Seleção acessível</span>
+            <h2 id="celestialNavigatorTitle">Navegador Celeste</h2>
+            <p id="celestialNavigatorHelp">Escolha um corpo celeste usando a lista. Funciona com teclado, toque e leitores de tela.</p>
+            <label id="celestialBodySelectLabel" for="celestialBodySelect">Corpo celeste</label>
+            <select id="celestialBodySelect"></select>
+            <button id="btnSelectCelestialBody" class="primary-action" type="button">Selecionar e aproximar</button>
+        </div>
+    </div>
+
+    <div id="canvas-container">
+        <div id="labels-container"></div>
+    </div>
+
+    <div id="infoBox" class="info-box">
+        <button id="infoBoxClose" class="info-box-close" aria-label="Fechar informações" data-i18n-aria-label="closeInformation">&times;</button>
+        <h3 id="infoBoxTitle"></h3>
+        <p><strong id="lblEquatorialDiameter">Diâmetro médio:</strong> <span id="infoBoxDiameter"></span> km</p>
+        <p><strong id="infoBoxDistanceLabel">Distância do Sol:</strong> <span id="infoBoxDistance"></span> km</p>
+        <p><strong id="lblOrbitalPeriod">Período Orbital:</strong> <span id="infoBoxPeriod"></span> <span id="lblDays">dias</span></p>
+        <p id="infoBoxSpeedP"><strong id="lblAvgOrbitalSpeed">Velocidade Orbital Média:</strong> <span id="infoBoxSpeed"></span> km/h</p>
+        <p id="infoBoxSatellitesP" style="display: none;"><strong id="lblNaturalSatellites">Satélites Naturais:</strong> <span id="infoBoxSatellites"></span></p>
+        <button id="btnFollowPlanet">Seguir Planeta</button>
+    </div>
+
+    <!-- Modal Sobre o Projeto -->
+    <div id="aboutModal" class="about-modal">
+        <div class="about-modal-content">
+            <button id="aboutModalClose" class="about-modal-close" aria-label="Fechar sobre o projeto" data-i18n-aria-label="closeAbout">&times;</button>
+            <h3 id="aboutModalTitle">Sobre o Projeto</h3>
+            <p id="aboutModalText"></p>
+            <div style="margin-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 10px; font-size: 0.9em;">
+                <strong id="aboutModalContactLabel">Contato:</strong> <a href="mailto:rodrigo.pacheco@ifsp.edu.br" style="color: #00ffff; text-decoration: none; font-weight: bold;">rodrigo.pacheco@ifsp.edu.br</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls-container" id="controlsContainer">
+        <button id="btnCollapseControls" class="collapse-toggle-btn" title="Recolher Painel">▼</button>
+        <div class="controls-group">
+            <button id="btnToggleAnimation">Parar</button>
+            <button id="btnNorthView" title="Centralizar e visualizar a partir do polo norte celeste">Visão Norte</button>
+            <button id="btnAboutProject" title="Sobre o Projeto">ℹ️ Info</button>
+             <label id="lblShowOrbits"><input type="checkbox" id="showOrbitsCheck" checked> Órbitas</label>
+             <label id="lblShowLabels"><input type="checkbox" id="showLabelsCheck" checked> Nomes</label>
+             <label id="lblShowAsteroids"><input type="checkbox" id="showAsteroidsCheck" checked> Asteroides</label>
+             <label id="lblShowDwarfPlanets"><input type="checkbox" id="showDwarfPlanetsCheck" checked> Planetas anões</label>
+             <label id="lblShowHalley"><input type="checkbox" id="showHalleyCheck" checked> Cometa Halley</label>
+             <label id="lblShowMoons"><input type="checkbox" id="showMajorMoonsCheck" checked> Luas</label>
+             <label id="lblShowAxes"><input type="checkbox" id="showAxesCheck"> Eixo de Rotação</label>
+             <label id="lblHighlight"><input type="checkbox" id="highlightPlanetsCheck"> Destacar</label>
+             <label id="lblRealisticSpeed"><input type="checkbox" id="useProportionalSpeedCheck"> Velocidade Realista</label>
+             <label id="lblRealisticDistance"><input type="checkbox" id="useProportionalDistanceCheck"> Distância Realista</label>
+             <label id="lblRealisticDiameter"><input type="checkbox" id="useProportionalDiameterCheck"> Diâmetro Realista</label>
+             <label id="lblRealisticSun"><input type="checkbox" id="realSunScaleCheck" disabled> Diâmetro Realista do Sol</label>
+             <label id="lblGraphicsQuality" for="graphicsQualitySelect">Qualidade:</label>
+             <select id="graphicsQualitySelect">
+                 <option value="auto">Automática</option><option value="high">Alta</option><option value="medium">Média</option><option value="low">Leve</option>
+             </select>
+        </div>
+        <div class="controls-group">
+              <label for="generalSpeedSlider" id="lblSpeedLabel">Velocidade:</label>
+              <input type="range" id="generalSpeedSlider" min="0.1" max="100" step="0.1" value="1">
+              <input type="number" id="generalSpeedInput" min="0.1" max="100" step="0.1" value="1.0"> x
+
+              <label for="zoomSlider" id="lblZoomLabel">Zoom:</label>
+              <input type="range" id="zoomSlider" min="0" max="200" step="0.05" value="0.94">
+              <input type="number" id="zoomInput" min="0" max="200" step="0.05" value="0.94"> x
+        </div>
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <div id="profileModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
+        <form id="profileForm" class="game-modal-card profile-card">
+            <span class="game-modal-eyebrow" data-i18n="profileEyebrow">Projeto Gaia · Registro de tripulação</span>
+            <h1 id="profileModalTitle" data-i18n="profileTitle">Identificação do comandante</h1>
+            <p id="profileModalSubtitle" data-i18n="profileSubtitle">Antes da primeira missão, registre sua identificação na tripulação.</p>
+            <label class="profile-field">
+                <span data-i18n="commanderName">Nome do comandante</span>
+                <input id="commanderNameInput" type="text" minlength="2" maxlength="20" autocomplete="nickname" placeholder="Digite seu nome" data-i18n-placeholder="commanderNamePlaceholder" required>
+            </label>
+            <fieldset class="avatar-fieldset">
+                <legend data-i18n="chooseAvatar">Escolha seu avatar</legend>
+                <div id="avatarOptions" class="avatar-options"></div>
+            </fieldset>
+            <p id="profileError" class="profile-error" aria-live="polite"></p>
+            <button class="primary-action profile-submit" type="submit" data-i18n="confirmIdentification">Confirmar identificação</button>
+        </form>
+    </div>
+
+    <div id="modeModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="modeModalTitle">
+        <div class="game-modal-card mode-selection-card">
+            <span class="game-modal-eyebrow" data-i18n="modeEyebrow">Ano 2184 · Projeto Gaia</span>
+            <h1 id="modeModalTitle" data-i18n="modeTitle">Como deseja explorar?</h1>
+            <p data-i18n="modeDescription">A humanidade criou uma iniciativa científica para ampliar nosso conhecimento sobre recursos, ambientes e fenômenos do Sistema Solar.</p>
+            <button id="btnEditProfileFromMenu" class="mode-profile-summary" type="button">
+                <span id="modeProfileSummary" data-i18n="commander">Comandante</span>
+                <small data-i18n="editProfile">Editar perfil</small>
+            </button>
+            <button id="btnOpenJournalFromMenu" class="mode-profile-summary" type="button">
+                <span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h12a2 2 0 0 1 2 2v16H7a2 2 0 0 1-2-2V3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 3v18m3-13h5m-5 4h5" stroke="currentColor" stroke-width="1.6"/></svg> <span data-i18n="journal">Diário de Bordo</span></span>
+                <small data-i18n="discoveries">Ver descobertas</small>
+            </button>
+            <button id="btnOpenTutorialFromMenu" class="mode-profile-summary" type="button">
+                <span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v17H6.5A2.5 2.5 0 0 0 4 22V5.5zm16 0A2.5 2.5 0 0 0 17.5 3H12v17h5.5A2.5 2.5 0 0 1 20 22V5.5z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg> <span data-i18n="tutorial">Tutorial de bordo</span></span>
+                <small data-i18n="reviewInstructions">Rever instruções</small>
+            </button>
+            <button id="btnOpenDailyChallengeFromMenu" class="mode-profile-summary daily-challenge-launcher" type="button">
+                <span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg> <span data-i18n="dailyChallenge">Desafio do Dia</span></span>
+                <small id="dailyChallengeMenuStatus">Conclua a campanha para desbloquear</small>
+            </button>
+            <button id="btnOpenExpeditionFromMenu" class="mode-profile-summary expedition-launcher" type="button">
+                <span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 16 9l6 3-6 3-4 7-4-7-6-3 6-3 4-7z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.4" fill="currentColor"/></svg> <span data-i18n="scientificExpedition">Expedição Científica</span></span>
+                <small id="expeditionMenuStatus">Conclua a campanha para desbloquear</small>
+            </button>
+            <fieldset class="accessibility-settings">
+                <legend data-i18n="accessibility">Acessibilidade</legend>
+                <label><input id="accessReduceMotion" type="checkbox"> <span data-i18n="reduceMotion">Reduzir animações</span></label>
+                <label><input id="accessHighContrast" type="checkbox"> <span data-i18n="highContrast">Alto contraste</span></label>
+            </fieldset>
+            <button id="btnEraseGaiaData" class="mode-profile-summary destructive-action" type="button">
+                <span data-i18n="eraseData">Apagar meus dados</span>
+                <small data-i18n="eraseDataHint">Remover perfil, progresso e preferências deste dispositivo</small>
+            </button>
+            <div class="mode-options">
+                <button id="btnChooseExploration" class="mode-option" type="button">
+                    <strong data-i18n="explorationMode">Modo Exploração</strong>
+                    <span data-i18n="explorationDescription">Navegue livremente pelo simulador e consulte os corpos celestes.</span>
+                </button>
+                <button id="btnChooseMission" class="mode-option featured" type="button">
+                    <strong data-i18n="missionMode">Modo Missão</strong>
+                    <span data-i18n="missionDescription">Cumpra objetivos científicos, responda perguntas e evolua no Projeto Gaia.</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="eraseDataModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="eraseDataTitle">
+        <div class="game-modal-card confirmation-card">
+            <span class="game-modal-eyebrow" data-i18n="privacyAndData">Privacidade e dados</span>
+            <h2 id="eraseDataTitle" data-i18n="eraseDataTitle">Apagar todos os dados?</h2>
+            <p data-i18n="eraseDataDescription">Seu perfil, campanha, desafios, expedições e preferências serão removidos deste dispositivo. Esta ação não pode ser desfeita.</p>
+            <p id="eraseDataError" class="profile-error" role="alert"></p>
+            <div class="dialog-actions">
+                <button id="btnCancelEraseData" class="secondary-action" type="button" data-i18n="cancel">Cancelar</button>
+                <button id="btnConfirmEraseData" class="primary-action danger-action" type="button" data-i18n="confirmEraseData">Sim, apagar tudo</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tutorialModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="tutorialTitle">
+        <div class="game-modal-card tutorial-card">
+            <span id="tutorialEyebrow" class="game-modal-eyebrow">Academia Gaia · Orientação</span>
+            <span id="tutorialStep" class="tutorial-step"></span>
+            <div id="tutorialIcon" class="tutorial-icon" aria-hidden="true"></div>
+            <h2 id="tutorialTitle"></h2>
+            <p id="tutorialText"></p>
+            <div id="tutorialProgress" class="tutorial-progress" role="progressbar" aria-valuemin="1" aria-valuemax="5"></div>
+            <div class="tutorial-actions">
+                <button id="btnSkipTutorial" class="secondary-action" type="button">Pular tutorial</button>
+                <span class="tutorial-navigation">
+                    <button id="btnTutorialBack" class="secondary-action" type="button">Voltar</button>
+                    <button id="btnTutorialNext" class="primary-action" type="button">Próximo</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="missionBriefingModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="briefingTitle">
+        <div class="game-modal-card dialogue-card">
+            <div class="speaker-portrait"><svg class="helena-portrait" viewBox="0 0 96 96" role="img" aria-label="Dra. Helena Vega"><circle cx="48" cy="48" r="45" fill="#07172d" stroke="#76eaff" stroke-width="2"/><path d="M19 90c3-20 14-29 29-29s26 9 29 29" fill="#e8f4f7" stroke="#76eaff" stroke-width="2"/><path d="M31 38c0-14 7-23 18-23s19 9 19 23v14c-5 9-13 14-20 14s-14-5-17-14z" fill="#b96f4b"/><path d="M28 41c-2-20 8-31 22-31 17 0 23 13 20 34-4-8-8-17-10-21-8 9-20 13-32 18z" fill="#29203b"/><circle cx="42" cy="45" r="2" fill="#152139"/><circle cx="58" cy="45" r="2" fill="#152139"/><path d="M43 55c4 3 9 3 13 0" fill="none" stroke="#713f36" stroke-width="2" stroke-linecap="round"/><path d="M35 72h26l-4 18H39z" fill="#153f67"/><circle cx="48" cy="78" r="5" fill="#7affc5"/></svg></div>
+            <div class="dialogue-content">
+                <span class="game-modal-eyebrow" data-i18n="missionControlSpeaker">Dra. Helena Vega · Controle da Missão</span>
+                <h2 id="briefingTitle"></h2>
+                <p id="briefingText"></p>
+                <p id="briefingObjective" class="dialogue-objective"></p>
+                <button id="btnStartExploration" class="primary-action" type="button" data-i18n="startExploration">Iniciar exploração</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="launchConfirmModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="launchConfirmTitle">
+        <div class="game-modal-card launch-card">
+            <div class="launch-pad-rocket"><svg class="gaia-rocket-icon" viewBox="0 0 80 120" role="img" aria-label="Foguete do Projeto Gaia"><path d="M40 5c18 16 25 42 18 69H22C15 47 22 21 40 5z" fill="#e8f6fa" stroke="#6ee7ff" stroke-width="3"/><path d="M22 65 8 92l20-8m30-19 14 27-20-8" fill="#174c75" stroke="#6ee7ff" stroke-width="3"/><circle cx="40" cy="43" r="11" fill="#194e7d" stroke="#7affc5" stroke-width="3"/><path d="M31 76h18l-3 17H34z" fill="#24354d"/><path d="m34 92 6 23 6-23" fill="#ffb457" stroke="#ff7047" stroke-width="2"/></svg></div>
+            <span class="game-modal-eyebrow" data-i18n="destinationConfirmed">Destino confirmado</span>
+            <h2 id="launchConfirmTitle" data-i18n="prepareLaunch">Preparar lançamento</h2>
+            <p id="launchConfirmText"></p>
+            <button id="btnLaunchRocket" class="primary-action" type="button" data-i18n="startLaunch">Iniciar lançamento</button>
+        </div>
+    </div>
+
+    <div id="dossierModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="dossierTitle">
+        <div class="game-modal-card dossier-card">
+            <span class="game-modal-eyebrow" data-i18n="analysisEyebrow">Centro de Análise · Projeto Gaia</span>
+            <h2 id="dossierTitle"></h2>
+            <section id="analysisScanner" class="analysis-scanner" aria-labelledby="analysisScannerTitle">
+                <h3 id="analysisScannerTitle">Evidências coletadas</h3>
+                <div class="scanner-line"></div>
+                <div id="analysisScannerData" class="scanner-data"></div>
+                <p id="analysisScannerStatus" class="analysis-scanner-status" aria-live="polite"></p>
+            </section>
+            <p id="dossierOverview" class="dossier-overview"></p>
+            <div id="dossierSections" class="dossier-sections"></div>
+            <details id="dossierLearnMore" class="dossier-more">
+                <summary data-i18n="learnMore">Saiba mais</summary>
+                <p id="dossierLearnMoreText"></p>
+            </details>
+            <details id="dossierSources" class="dossier-sources">
+                <summary data-i18n="scientificSources">Fontes científicas</summary>
+                <p id="dossierReviewDate" class="dossier-review-date"></p>
+                <ul id="dossierSourcesList"></ul>
+            </details>
+            <button id="btnDossierAction" class="primary-action" type="button">Ir para as perguntas</button>
+        </div>
+    </div>
+
+    <div id="journalModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="journalTitle">
+        <div class="game-modal-card journal-card">
+            <button id="btnCloseJournal" class="modal-close-button" type="button" aria-label="Fechar diário" data-i18n-aria-label="closeJournal">&times;</button>
+            <span class="game-modal-eyebrow" data-i18n="personalArchive">Arquivo pessoal · Projeto Gaia</span>
+            <h2 id="journalTitle" data-i18n="journal">Diário de Bordo</h2>
+            <div class="journal-profile">
+                <span id="journalAvatar" class="journal-avatar" aria-hidden="true"></span>
+                <div><strong id="journalName">Comandante</strong><small id="journalLevel">Cadete</small></div>
+            </div>
+            <div class="journal-stats">
+                <div><span>XP</span><strong id="journalXP">0</strong></div>
+                <div><span data-i18n="completed">Concluídas</span><strong id="journalCompleted">0/21</strong></div>
+                <div><span data-i18n="attempts">Tentativas</span><strong id="journalAttempts">0</strong></div>
+                <div><span data-i18n="accuracy">Precisão</span><strong id="journalAccuracy">—</strong></div>
+                <div><span data-i18n="stars">Estrelas</span><strong id="journalStars">0/63</strong></div>
+            </div>
+            <div class="journal-progress"><span id="journalProgressBar"></span></div>
+            <div id="journalChapterSummary" class="journal-chapter-summary"></div>
+            <h3 class="journal-section-title" data-i18n="discoveryArchive">Arquivo de descobertas</h3>
+            <div id="journalMissions" class="journal-missions"></div>
+        </div>
+    </div>
+
+    <div id="trainingModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="trainingTitle">
+        <div class="game-modal-card training-card">
+            <span class="game-modal-eyebrow" data-i18n="trainingEyebrow">Simulação de treinamento · Sem XP</span>
+            <h2 id="trainingTitle"></h2>
+            <span id="trainingProgress" class="question-progress"></span>
+            <p id="trainingQuestion" class="mission-question"></p>
+            <div id="trainingAlternatives" class="mission-alternatives"></div>
+            <div id="trainingFeedback" class="mission-feedback"></div>
+            <div class="question-actions">
+                <button id="btnTrainingNext" class="primary-action" type="button" hidden data-i18n="nextQuestion">Próxima pergunta</button>
+                <button id="btnCloseTraining" class="secondary-action" type="button" data-i18n="backToJournal">Voltar ao diário</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dailyChallengeModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="dailyChallengeTitle">
+        <div class="game-modal-card daily-challenge-card">
+            <button id="btnCloseDailyChallenge" class="modal-close-button" type="button" aria-label="Fechar desafio" data-i18n-aria-label="closeChallenge">&times;</button>
+            <span id="dailyChallengeEyebrow" class="game-modal-eyebrow">Transmissão diária · Academia Gaia</span>
+            <h2 id="dailyChallengeTitle">Desafio do Dia</h2>
+            <div id="dailyChallengeStats" class="daily-challenge-stats"></div>
+            <section id="dailyChallengeLocked" class="daily-challenge-state" hidden>
+                <span class="daily-challenge-emblem" aria-hidden="true">✦</span>
+                <h3 id="dailyChallengeLockedTitle">Arquivo bloqueado</h3>
+                <p id="dailyChallengeLockedText"></p>
+            </section>
+            <section id="dailyChallengeQuestionArea" hidden>
+                <span id="dailyChallengeProgress" class="question-progress"></span>
+                <h3 id="dailyChallengeMission"></h3>
+                <p id="dailyChallengeQuestion" class="mission-question"></p>
+                <div id="dailyChallengeAlternatives" class="mission-alternatives"></div>
+                <div id="dailyChallengeFeedback" class="mission-feedback" aria-live="polite"></div>
+                <button id="btnDailyChallengeNext" class="primary-action" type="button" hidden>Próxima questão</button>
+            </section>
+            <section id="dailyChallengeResult" class="daily-challenge-state" hidden>
+                <span id="dailyChallengeResultMedal" class="daily-challenge-emblem" aria-hidden="true">✦</span>
+                <h3 id="dailyChallengeResultTitle"></h3>
+                <p id="dailyChallengeResultText"></p>
+                <button id="btnFinishDailyChallenge" class="primary-action" type="button">Concluir transmissão</button>
+            </section>
+        </div>
+    </div>
+
+    <div id="expeditionModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="expeditionTitle">
+        <div class="game-modal-card expedition-card">
+            <button id="btnCloseExpedition" class="modal-close-button" type="button" aria-label="Fechar expedição" data-i18n-aria-label="closeExpedition">&times;</button>
+            <span id="expeditionEyebrow" class="game-modal-eyebrow">Simulação avançada · Academia Gaia</span>
+            <h2 id="expeditionTitle">Expedição Científica</h2>
+            <div id="expeditionRecords" class="expedition-records"></div>
+            <section id="expeditionLocked" class="daily-challenge-state" hidden>
+                <span class="daily-challenge-emblem" aria-hidden="true">◆</span>
+                <h3 id="expeditionLockedTitle">Expedição bloqueada</h3>
+                <p id="expeditionLockedText"></p>
+            </section>
+            <section id="expeditionIntro" class="expedition-intro" hidden>
+                <div class="expedition-rules">
+                    <div><span>10</span><p id="expeditionRuleQuestions">questões por expedição</p></div>
+                    <div><span>3</span><p id="expeditionRuleEnergy">cargas de energia</p></div>
+                    <div><span>×</span><p id="expeditionRuleCombo">bônus por sequência</p></div>
+                </div>
+                <p id="expeditionIntroText"></p>
+                <button id="btnStartExpedition" class="primary-action" type="button">Iniciar expedição</button>
+            </section>
+            <section id="expeditionQuestionArea" hidden>
+                <div class="expedition-hud">
+                    <span id="expeditionProgress"></span>
+                    <span id="expeditionEnergy"></span>
+                    <span id="expeditionScore"></span>
+                    <span id="expeditionCombo"></span>
+                </div>
+                <h3 id="expeditionMission"></h3>
+                <p id="expeditionQuestion" class="mission-question"></p>
+                <div id="expeditionAlternatives" class="mission-alternatives"></div>
+                <div id="expeditionFeedback" class="mission-feedback" aria-live="polite"></div>
+                <button id="btnExpeditionNext" class="primary-action" type="button" hidden>Continuar</button>
+            </section>
+            <section id="expeditionResult" class="daily-challenge-state" hidden>
+                <span id="expeditionResultEmblem" class="daily-challenge-emblem" aria-hidden="true">◆</span>
+                <h3 id="expeditionResultTitle"></h3>
+                <p id="expeditionResultText"></p>
+                <div class="expedition-result-actions">
+                    <button id="btnRestartExpedition" class="primary-action" type="button">Nova expedição</button>
+                    <button id="btnFinishExpedition" class="secondary-action" type="button">Voltar ao menu</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="missionQuestionModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="missionQuestionTitle">
+        <div class="game-modal-card question-card">
+            <span class="game-modal-eyebrow" data-i18n="scientificAnalysis">Análise científica</span>
+            <h2 id="missionQuestionTitle"></h2>
+            <span id="missionQuestionProgress" class="question-progress">Pergunta 1/2</span>
+            <p id="missionQuestionText" class="mission-question"></p>
+            <div id="missionAlternatives" class="mission-alternatives"></div>
+            <div id="missionFeedback" class="mission-feedback" aria-live="polite"></div>
+            <div id="missionChapterBadge" class="mission-chapter-badge" hidden></div>
+            <div class="question-actions">
+                <button id="btnReviewDossier" class="secondary-action" type="button" data-i18n="reviewDossier">Rever dossiê</button>
+                <button id="btnContinueMission" class="primary-action" type="button" hidden data-i18n="nextMission">Próxima missão</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="campaignCompleteModal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="campaignCompleteTitle">
+        <div class="game-modal-card completion-card">
+            <span class="completion-icon">✦</span>
+            <span class="game-modal-eyebrow" data-i18n="transmittedReport">Relatório transmitido</span>
+            <h2 id="campaignCompleteTitle" data-i18n="firstCycleComplete">Primeiro ciclo concluído</h2>
+            <p id="campaignCompleteText" data-i18n="campaignDefaultText">As investigações científicas foram finalizadas. Seu conhecimento ajudará a orientar as próximas etapas do Projeto Gaia.</p>
+            <div class="completion-actions">
+                <button id="btnRestartCampaign" class="primary-action" type="button" data-i18n="restartCampaign">Reiniciar campanha</button>
+                <button id="btnCampaignDailyChallenge" class="secondary-action" type="button" data-i18n="dailyChallenge">Desafio do Dia</button>
+                <button id="btnCampaignExpedition" class="secondary-action" type="button" data-i18n="scientificExpedition">Expedição Científica</button>
+                <button id="btnCampaignExploration" class="secondary-action" type="button" data-i18n="continueExploring">Continuar explorando</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="missionToast" class="mission-toast" role="status"></div>
+
+    <div id="rocketFlight" class="launch-sequence" aria-hidden="true" hidden>
+        <div class="cutscene-stars"></div>
+        <div class="cutscene-planet" data-name="Destino"></div>
+        <div class="launch-status" data-i18n="calculatingRoute">Calculando rota...</div>
+        <div class="launch-countdown" aria-live="assertive"></div>
+        <div class="cutscene-rocket"><span class="cutscene-symbol"><svg class="gaia-rocket-icon" viewBox="0 0 80 120" aria-hidden="true"><path d="M40 5c18 16 25 42 18 69H22C15 47 22 21 40 5z" fill="#e8f6fa" stroke="#6ee7ff" stroke-width="3"/><path d="M22 65 8 92l20-8m30-19 14 27-20-8" fill="#174c75" stroke="#6ee7ff" stroke-width="3"/><circle cx="40" cy="43" r="11" fill="#194e7d" stroke="#7affc5" stroke-width="3"/><path d="M31 76h18l-3 17H34z" fill="#24354d"/></svg></span><span class="cutscene-flame"></span></div>
+    </div>
+
+    <script type="module" src="assets/js/main.js?v=1.0.2"></script>
+</body>
+</html>

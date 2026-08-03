@@ -1,0 +1,26 @@
+{
+  "pt": {
+    "mission-005": {"1":{"type":"ordering","question":"Ordene os corpos do menor para o maior período orbital.","items":["Mercúrio","Terra","Netuno"],"correctOrder":[0,1,2]}},
+    "mission-009": {"1":{"type":"trueFalse","question":"Mercúrio e Vênus possuem atmosferas idênticas.","alternatives":["Verdadeiro","Falso"],"correctAnswer":1}},
+    "mission-010": {"0":{"type":"ordering","question":"Ordene os planetas do menor para o maior período orbital.","items":["Terra","Júpiter","Netuno"],"correctOrder":[0,1,2]}},
+    "mission-012": {"1":{"type":"trueFalse","question":"A gravidade da Lua contribui para as marés oceânicas da Terra.","alternatives":["Verdadeiro","Falso"],"correctAnswer":0}},
+    "mission-014": {"1":{"type":"trueFalse","question":"O vulcanismo de Io renova sua superfície e recobre muitas crateras de impacto.","alternatives":["Verdadeiro","Falso"],"correctAnswer":0}},
+    "mission-018": {"0":{"type":"trueFalse","question":"Tritão orbita no sentido oposto à rotação de Netuno.","alternatives":["Verdadeiro","Falso"],"correctAnswer":0}}
+  },
+  "en": {
+    "mission-005": {"1":{"type":"ordering","question":"Order the bodies from shortest to longest orbital period.","items":["Mercury","Earth","Neptune"],"correctOrder":[0,1,2]}},
+    "mission-009": {"1":{"type":"trueFalse","question":"Mercury and Venus have identical atmospheres.","alternatives":["True","False"],"correctAnswer":1}},
+    "mission-010": {"0":{"type":"ordering","question":"Order the planets from shortest to longest orbital period.","items":["Earth","Jupiter","Neptune"],"correctOrder":[0,1,2]}},
+    "mission-012": {"1":{"type":"trueFalse","question":"The Moon's gravity contributes to Earth's ocean tides.","alternatives":["True","False"],"correctAnswer":0}},
+    "mission-014": {"1":{"type":"trueFalse","question":"Io's volcanism renews its surface and covers many impact craters.","alternatives":["True","False"],"correctAnswer":0}},
+    "mission-018": {"0":{"type":"trueFalse","question":"Triton orbits in the direction opposite to Neptune's rotation.","alternatives":["True","False"],"correctAnswer":0}}
+  },
+  "es": {
+    "mission-005": {"1":{"type":"ordering","question":"Ordena los cuerpos del menor al mayor período orbital.","items":["Mercurio","Tierra","Neptuno"],"correctOrder":[0,1,2]}},
+    "mission-009": {"1":{"type":"trueFalse","question":"Mercurio y Venus poseen atmósferas idénticas.","alternatives":["Verdadero","Falso"],"correctAnswer":1}},
+    "mission-010": {"0":{"type":"ordering","question":"Ordena los planetas del menor al mayor período orbital.","items":["Tierra","Júpiter","Neptuno"],"correctOrder":[0,1,2]}},
+    "mission-012": {"1":{"type":"trueFalse","question":"La gravedad de la Luna contribuye a las mareas oceánicas de la Tierra.","alternatives":["Verdadero","Falso"],"correctAnswer":0}},
+    "mission-014": {"1":{"type":"trueFalse","question":"El vulcanismo de Ío renueva su superficie y recubre muchos cráteres de impacto.","alternatives":["Verdadero","Falso"],"correctAnswer":0}},
+    "mission-018": {"0":{"type":"trueFalse","question":"Tritón orbita en el sentido opuesto a la rotación de Neptuno.","alternatives":["Verdadero","Falso"],"correctAnswer":0}}
+  }
+}

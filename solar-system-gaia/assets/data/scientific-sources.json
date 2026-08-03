@@ -1,0 +1,38 @@
+{
+  "reviewedAt": "2026-08-02",
+  "missions": {
+    "mission-001": [{ "organization": "NASA Science", "title": "Earth Facts", "url": "https://science.nasa.gov/earth/facts/" }],
+    "mission-002": [{ "organization": "NASA Science", "title": "Mars Facts", "url": "https://science.nasa.gov/mars/facts/" }],
+    "mission-003": [
+      { "organization": "NASA Science", "title": "Jupiter Facts", "url": "https://science.nasa.gov/jupiter/jupiter-facts/" },
+      { "organization": "NASA Science", "title": "Jupiter Moons", "url": "https://science.nasa.gov/jupiter/jupiter-moons/" }
+    ],
+    "mission-004": [{ "organization": "NASA Science", "title": "Venus Facts", "url": "https://science.nasa.gov/venus/venus-facts/" }],
+    "mission-005": [{ "organization": "NASA Science", "title": "Mercury Facts", "url": "https://science.nasa.gov/mercury/facts/" }],
+    "mission-006": [{ "organization": "NASA Science", "title": "Saturn Facts", "url": "https://science.nasa.gov/saturn/facts/" }],
+    "mission-007": [{ "organization": "NASA Science", "title": "Uranus Facts", "url": "https://science.nasa.gov/uranus/facts/" }],
+    "mission-008": [{ "organization": "NASA Science", "title": "Neptune Facts", "url": "https://science.nasa.gov/neptune/neptune-facts/" }],
+    "mission-009": [
+      { "organization": "NASA Science", "title": "Mercury Facts", "url": "https://science.nasa.gov/mercury/facts/" },
+      { "organization": "NASA Science", "title": "Venus Facts", "url": "https://science.nasa.gov/venus/venus-facts/" }
+    ],
+    "mission-010": [{ "organization": "NASA Science", "title": "About the Planets", "url": "https://science.nasa.gov/solar-system/planets/" }],
+    "mission-011": [{ "organization": "NASA Science", "title": "Saturn Facts", "url": "https://science.nasa.gov/saturn/facts/" }],
+    "mission-012": [{ "organization": "NASA Science", "title": "Moon Facts", "url": "https://science.nasa.gov/moon/facts/" }],
+    "mission-013": [{ "organization": "NASA Science", "title": "Europa Facts", "url": "https://science.nasa.gov/jupiter/jupiter-moons/europa/europa-facts/" }],
+    "mission-014": [{ "organization": "NASA Science", "title": "Io", "url": "https://science.nasa.gov/jupiter/jupiter-moons/io/" }],
+    "mission-015": [{ "organization": "NASA Science", "title": "Ganymede", "url": "https://science.nasa.gov/jupiter/jupiter-moons/ganymede/" }],
+    "mission-016": [{ "organization": "NASA Science", "title": "Titan Facts", "url": "https://science.nasa.gov/saturn/moons/titan/facts/" }],
+    "mission-017": [{ "organization": "NASA Science", "title": "Enceladus", "url": "https://science.nasa.gov/saturn/moons/enceladus/" }],
+    "mission-018": [{ "organization": "NASA Science", "title": "Triton", "url": "https://science.nasa.gov/neptune/moons/triton/" }],
+    "mission-019": [
+      { "organization": "NASA Science", "title": "Ceres Facts", "url": "https://science.nasa.gov/dwarf-planets/ceres/facts/" },
+      { "organization": "IAU", "title": "Definition of a Planet", "url": "https://www.iau.org/IAU/Iau/News/PR2006/iau-2006-general-assembly-resolution-votes.aspx" }
+    ],
+    "mission-020": [
+      { "organization": "NASA Science", "title": "Pluto Facts", "url": "https://science.nasa.gov/dwarf-planets/pluto/facts/" },
+      { "organization": "IAU", "title": "Definition of a Planet", "url": "https://www.iau.org/IAU/Iau/News/PR2006/iau-2006-general-assembly-resolution-votes.aspx" }
+    ],
+    "mission-021": [{ "organization": "NASA Science", "title": "1P/Halley", "url": "https://science.nasa.gov/solar-system/comets/1p-halley/" }]
+  }
+}

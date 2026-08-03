@@ -1,0 +1,710 @@
+[
+  {
+    "id": "mission-001",
+    "order": 1,
+    "title": "O planeta azul",
+    "description": "A primeira etapa do Projeto Gaia é estudar o planeta que reúne água líquida abundante, atmosfera protetora e vida conhecida.",
+    "planet": "Terra",
+    "objective": "Localize a Terra no Sistema Solar.",
+    "concept": "Habitabilidade e água líquida",
+    "question": "Qual conjunto de fatores contribui para a existência de água líquida na superfície da Terra?",
+    "alternatives": [
+      "Temperatura adequada e pressão atmosférica suficiente",
+      "Ausência completa de atmosfera",
+      "Proximidade extrema do Sol",
+      "Inexistência de gravidade"
+    ],
+    "correctAnswer": 0,
+    "scientificFact": "A distância da Terra ao Sol é importante, mas não age sozinha: pressão, atmosfera e efeito estufa natural também ajudam a manter água líquida.",
+    "scanData": [
+      "Distância média do Sol: 149,6 milhões de km",
+      "Atmosfera: principalmente nitrogênio e oxigênio",
+      "Água líquida cobre cerca de 71% da superfície"
+    ],
+    "additionalQuestions": [
+      {
+        "question": "Qual é uma função importante do efeito estufa natural da Terra?",
+        "alternatives": [
+          "Eliminar completamente o calor da superfície",
+          "Manter temperaturas compatíveis com água líquida e vida",
+          "Impedir a entrada de toda radiação solar",
+          "Remover o nitrogênio da atmosfera"
+        ],
+        "correctAnswer": 1
+      }
+    ],
+    "dossier": {
+      "overview": "A Terra é um planeta rochoso com água líquida abundante, atmosfera ativa e uma biosfera conhecida. Sua habitabilidade resulta da interação entre distância ao Sol, pressão, composição atmosférica e ciclos naturais.",
+      "sections": [
+        [
+          "Atmosfera e ambiente",
+          "Nitrogênio e oxigênio predominam. O efeito estufa natural mantém temperaturas adequadas; sem ele, a superfície seria muito mais fria."
+        ],
+        [
+          "Órbita e superfície",
+          "Completa uma órbita em cerca de 365 dias. Oceanos cobrem aproximadamente 71% da superfície e participam da regulação climática."
+        ],
+        [
+          "Exploração científica",
+          "Satélites monitoram clima, oceanos, vegetação e mudanças ambientais, produzindo dados essenciais para compreender o planeta."
+        ]
+      ],
+      "learnMore": "A chamada zona habitável indica onde temperaturas podem permitir água líquida, mas não garante vida. Atmosfera, atividade geológica, campo magnético e estabilidade orbital também são importantes."
+    }
+  },
+  {
+    "id": "mission-002",
+    "order": 2,
+    "title": "Vestígios de antigos rios",
+    "description": "Mapas orbitais revelam vales e minerais formados na presença de água. O Projeto Gaia precisa investigar esse mundo rochoso.",
+    "planet": "Marte",
+    "objective": "Encontre Marte e investigue seu passado aquático.",
+    "concept": "Água no passado de Marte",
+    "question": "Qual evidência indica que água líquida já circulou pela superfície de Marte?",
+    "alternatives": [
+      "Seu campo magnético global extremamente forte",
+      "Vales, deltas e minerais alterados pela água",
+      "A presença de anéis ao redor do planeta",
+      "Sua atmosfera rica em oxigênio"
+    ],
+    "correctAnswer": 1,
+    "scientificFact": "Marte conserva vales, deltas e minerais hidratados. Essas formações indicam que o planeta teve ambientes com água líquida há bilhões de anos.",
+    "scanData": [
+      "Atmosfera atual: muito fina e rica em dióxido de carbono",
+      "Temperatura média superficial: aproximadamente −65 °C",
+      "Superfície preserva vales, deltas e minerais hidratados"
+    ],
+    "additionalQuestions": [
+      {
+        "question": "Por que a água líquida é instável na superfície marciana atual?",
+        "alternatives": [
+          "Porque Marte não possui gravidade",
+          "Porque a baixa pressão e as temperaturas frias favorecem congelamento ou evaporação",
+          "Porque sua atmosfera é mais densa que a terrestre",
+          "Porque Marte está dentro do Sol"
+        ],
+        "correctAnswer": 1
+      }
+    ],
+    "dossier": {
+      "overview": "Marte é um planeta rochoso frio e seco na atualidade, mas sua superfície registra um passado com rios, lagos e ambientes potencialmente habitáveis.",
+      "sections": [
+        [
+          "Atmosfera e ambiente",
+          "A atmosfera é fina e rica em dióxido de carbono. A baixa pressão dificulta a permanência de água líquida na superfície atual."
+        ],
+        [
+          "Órbita e superfície",
+          "Possui vulcões gigantes, cânions, calotas polares e extensas planícies. Seu dia tem duração próxima à do dia terrestre."
+        ],
+        [
+          "Exploração científica",
+          "Orbitadores, módulos de pouso e rovers analisam minerais, clima, gelo subterrâneo e sinais de ambientes antigos."
+        ]
+      ],
+      "learnMore": "Deltas e minerais hidratados mostram que água alterou rochas marcianas. Missões procuram reconstruir quando esses ambientes existiram e por que o planeta perdeu grande parte de sua atmosfera."
+    }
+  },
+  {
+    "id": "mission-003",
+    "order": 3,
+    "title": "O guardião gigante",
+    "description": "A equipe científica quer compreender como o maior planeta influencia corpos menores por meio de sua intensa gravidade.",
+    "planet": "Júpiter",
+    "objective": "Localize Júpiter e analise sua influência gravitacional.",
+    "concept": "Gravidade e dinâmica orbital",
+    "question": "Por que Júpiter exerce forte influência sobre asteroides e cometas?",
+    "alternatives": [
+      "Porque não realiza movimento orbital",
+      "Porque é o planeta mais próximo do Sol",
+      "Porque sua grande massa produz um campo gravitacional intenso",
+      "Porque sua atmosfera bloqueia a gravidade solar"
+    ],
+    "correctAnswer": 2,
+    "scientificFact": "A enorme massa de Júpiter altera órbitas de pequenos corpos. Ele pode desviar alguns objetos, mas também pode direcionar outros para regiões internas do Sistema Solar.",
+    "scanData": [
+      "Massa: mais de duas vezes a de todos os outros planetas juntos",
+      "Composição: principalmente hidrogênio e hélio",
+      "Possui 101 luas oficialmente reconhecidas (março de 2026) e gravidade intensa"
+    ],
+    "additionalQuestions": [
+      {
+        "question": "Por que Júpiter é classificado como gigante gasoso?",
+        "alternatives": [
+          "Porque é formado principalmente por hidrogênio e hélio, sem uma superfície sólida definida",
+          "Porque é inteiramente oco",
+          "Porque não possui atmosfera",
+          "Porque sua superfície é coberta por oceanos terrestres"
+        ],
+        "correctAnswer": 0
+      }
+    ],
+    "dossier": {
+      "overview": "Júpiter é o maior planeta do Sistema Solar. Sua enorme massa influencia asteroides, cometas, luas e a dinâmica orbital de toda a região externa.",
+      "sections": [
+        [
+          "Atmosfera e ambiente",
+          "É formado principalmente por hidrogênio e hélio. Nuvens e tempestades organizam-se em faixas, incluindo a Grande Mancha Vermelha."
+        ],
+        [
+          "Estrutura e gravidade",
+          "Não possui uma superfície sólida definida. A pressão aumenta profundamente até produzir estados exóticos da matéria."
+        ],
+        [
+          "Exploração científica",
+          "Sondas estudam seu campo magnético, atmosfera e luas, especialmente mundos potencialmente oceânicos como Europa."
+        ]
+      ],
+      "learnMore": "Júpiter pode desviar alguns pequenos corpos, mas sua gravidade também pode modificar órbitas e enviar objetos para o Sistema Solar interno. Por isso, chamá-lo apenas de “escudo” é uma simplificação."
+    }
+  },
+  {
+    "id": "mission-004",
+    "order": 4,
+    "title": "O mundo sob pressão",
+    "description": "Um planeta de tamanho semelhante ao da Terra apresenta temperaturas capazes de derreter chumbo. A equipe precisa compreender o papel de sua atmosfera.",
+    "planet": "Vênus",
+    "objective": "Localize Vênus e investigue seu efeito estufa extremo.",
+    "concept": "Atmosfera e efeito estufa",
+    "question": "Qual fator explica principalmente as temperaturas extremamente elevadas da superfície de Vênus?",
+    "alternatives": [
+      "A ausência total de gases atmosféricos",
+      "Sua atmosfera densa e rica em dióxido de carbono",
+      "A existência de grandes oceanos de água líquida",
+      "Sua rotação muito mais rápida que a terrestre"
+    ],
+    "correctAnswer": 1,
+    "scientificFact": "A atmosfera venusiana é muito densa e composta principalmente por dióxido de carbono. Seu efeito estufa intenso mantém a superfície perto de 467 °C.",
+    "scanData": [
+      "Atmosfera: cerca de 96% de dióxido de carbono",
+      "Pressão superficial: aproximadamente 93 vezes a terrestre",
+      "Temperatura superficial média: aproximadamente 467 °C"
+    ],
+    "additionalQuestions": [
+      {
+        "question": "Por que Vênus é mais quente que Mercúrio, mesmo estando mais distante do Sol?",
+        "alternatives": [
+          "Porque Vênus produz luz como uma estrela",
+          "Por causa de seu efeito estufa extremamente intenso",
+          "Porque Mercúrio possui oceanos gelados",
+          "Porque Vênus não recebe radiação solar"
+        ],
+        "correctAnswer": 1
+      }
+    ],
+    "dossier": {
+      "overview": "Vênus tem tamanho semelhante ao da Terra, porém apresenta atmosfera extremamente densa, pressão elevada e o efeito estufa mais intenso entre os planetas.",
+      "sections": [
+        [
+          "Atmosfera e ambiente",
+          "Dióxido de carbono predomina, com nuvens de ácido sulfúrico. A superfície permanece próxima de 467 °C."
+        ],
+        [
+          "Órbita e rotação",
+          "Sua rotação é muito lenta e ocorre no sentido oposto ao da maioria dos planetas. Um dia venusiano é extremamente longo."
+        ],
+        [
+          "Exploração científica",
+          "Radar orbital é usado para atravessar visualmente as nuvens e mapear vulcões, planícies e outras estruturas."
+        ]
+      ],
+      "learnMore": "Vênus é mais quente que Mercúrio porque sua atmosfera retém energia com enorme eficiência. Ele é um laboratório natural para estudar clima e evolução atmosférica."
+    }
+  },
+  {
+    "id": "mission-005",
+    "order": 5,
+    "title": "A órbita mais veloz",
+    "description": "Para calibrar os modelos orbitais do Projeto Gaia, encontre o planeta que completa uma volta ao redor do Sol em menos tempo.",
+    "planet": "Mercúrio",
+    "objective": "Encontre Mercúrio e estude seu curto período orbital.",
+    "concept": "Órbitas e período orbital",
+    "question": "Por que Mercúrio possui o menor período orbital entre os planetas?",
+    "alternatives": [
+      "Porque está mais próximo do Sol e percorre uma órbita menor com alta velocidade",
+      "Porque é o planeta com maior quantidade de luas",
+      "Porque não sofre influência da gravidade solar",
+      "Porque permanece imóvel enquanto o Sol gira ao seu redor"
+    ],
+    "correctAnswer": 0,
+    "scientificFact": "Mercúrio completa uma órbita em aproximadamente 88 dias terrestres. Além de percorrer um caminho menor, move-se mais rapidamente quando está próximo do Sol.",
+    "scanData": [
+      "Período orbital: aproximadamente 88 dias terrestres",
+      "Órbita mais excêntrica que a dos demais planetas",
+      "Quase não possui atmosfera capaz de distribuir calor"
+    ],
+    "additionalQuestions": [
+      {
+        "question": "Como a velocidade orbital de Mercúrio muda ao longo de sua órbita elíptica?",
+        "alternatives": [
+          "Permanece sempre exatamente igual",
+          "É maior quando o planeta está mais próximo do Sol",
+          "Chega a zero no ponto mais distante",
+          "Depende apenas de sua rotação"
+        ],
+        "correctAnswer": 1
+      }
+    ],
+    "dossier": {
+      "overview": "Mercúrio é o menor planeta e o mais próximo do Sol. Sua órbita curta e excêntrica provoca grandes variações de velocidade e distância solar.",
+      "sections": [
+        [
+          "Ambiente",
+          "Quase não possui atmosfera para distribuir calor. A temperatura varia intensamente entre regiões iluminadas e escuras."
+        ],
+        [
+          "Órbita e rotação",
+          "Completa uma órbita em 88 dias e gira três vezes a cada duas órbitas, uma relação chamada ressonância 3:2."
+        ],
+        [
+          "Exploração científica",
+          "Sondas investigam sua grande proporção metálica, campo magnético, crateras e gelo preservado em sombras polares permanentes."
+        ]
+      ],
+      "learnMore": "Pelas leis de Kepler, Mercúrio se move mais rapidamente quando está próximo do Sol. Apesar do calor, crateras polares que nunca recebem luz podem conservar gelo de água."
+    }
+  },
+  {
+    "id": "mission-006",
+    "order": 6,
+    "title": "Arquivos de gelo e rocha",
+    "description": "Milhares de estruturas orbitam um gigante gasoso. Estudar sua composição ajuda a compreender materiais remanescentes da formação planetária.",
+    "planet": "Saturno",
+    "objective": "Localize Saturno e examine a natureza de seus anéis.",
+    "concept": "Anéis planetários",
+    "question": "Do que são formados principalmente os anéis de Saturno?",
+    "alternatives": [
+      "Uma superfície sólida e contínua",
+      "Gases luminosos liberados pelo planeta",
+      "Inúmeras partículas de gelo, poeira e fragmentos rochosos",
+      "Água líquida mantida pela ausência de gravidade"
+    ],
+    "correctAnswer": 2,
+    "scientificFact": "Os anéis não são discos sólidos. Eles contêm incontáveis partículas, desde grãos minúsculos até blocos maiores, compostas sobretudo por gelo de água.",
+    "scanData": [
+      "Anéis compostos principalmente por partículas de gelo",
+      "Densidade média menor que a da água",
+      "Gigante gasoso formado sobretudo por hidrogênio e hélio"
+    ],
+    "additionalQuestions": [
+      {
+        "question": "O que significa afirmar que Saturno possui densidade média menor que a da água?",
+        "alternatives": [
+          "Que ele não possui massa",
+          "Que cada parte do planeta é vazia",
+          "Que sua massa está distribuída em um volume muito grande",
+          "Que seus anéis são feitos de água líquida"
+        ],
+        "correctAnswer": 2
+      }
+    ],
+    "dossier": {
+      "overview": "Saturno é um gigante gasoso conhecido por seu amplo sistema de anéis, formado por incontáveis partículas que orbitam o planeta.",
+      "sections": [
+        [
+          "Atmosfera e estrutura",
+          "Hidrogênio e hélio predominam. Sua densidade média é menor que a da água porque a massa ocupa um volume enorme."
+        ],
+        [
+          "Anéis e luas",
+          "Os anéis contêm gelo, poeira e rochas. Luas como Titã e Encélado são importantes alvos de pesquisa."
+        ],
+        [
+          "Exploração científica",
+          "A missão Cassini estudou o planeta, os anéis e suas luas durante anos, incluindo passagens pelos jatos de Encélado."
+        ]
+      ],
+      "learnMore": "Os anéis apresentam lacunas e ondas produzidas pela interação gravitacional com pequenas luas. Eles são dinâmicos e mudam em diferentes escalas de tempo."
+    }
+  },
+  {
+    "id": "mission-007",
+    "order": 7,
+    "title": "Um planeta deitado",
+    "description": "Os sensores detectaram estações extremas em um gigante gelado cujo eixo de rotação apresenta uma inclinação incomum.",
+    "planet": "Urano",
+    "objective": "Encontre Urano e investigue sua inclinação axial.",
+    "concept": "Inclinação axial e estações",
+    "question": "Qual consequência está associada à grande inclinação do eixo de Urano?",
+    "alternatives": [
+      "O planeta deixou de orbitar o Sol",
+      "Seus polos podem permanecer voltados para o Sol durante longos períodos",
+      "Sua gravidade desaparece em parte da órbita",
+      "Sua atmosfera se transforma em uma superfície sólida"
+    ],
+    "correctAnswer": 1,
+    "scientificFact": "O eixo de Urano é inclinado cerca de 98°. Durante partes de sua longa órbita, um polo fica direcionado para o Sol, produzindo estações muito prolongadas.",
+    "scanData": [
+      "Inclinação axial: aproximadamente 98°",
+      "Atmosfera contém hidrogênio, hélio e metano",
+      "Cada estação dura cerca de 21 anos terrestres"
+    ],
+    "additionalQuestions": [
+      {
+        "question": "Qual gás ajuda a produzir a aparência azul-esverdeada de Urano?",
+        "alternatives": [
+          "Oxigênio",
+          "Metano",
+          "Vapor de ferro",
+          "Nitrogênio líquido"
+        ],
+        "correctAnswer": 1
+      }
+    ],
+    "dossier": {
+      "overview": "Urano é um gigante gelado com eixo de rotação inclinado quase de lado, característica que produz estações extremamente longas.",
+      "sections": [
+        [
+          "Atmosfera",
+          "Hidrogênio, hélio e metano estão presentes. O metano absorve parte da luz vermelha e contribui para a aparência azul-esverdeada."
+        ],
+        [
+          "Órbita e inclinação",
+          "Leva cerca de 84 anos para orbitar o Sol. Cada estação dura aproximadamente 21 anos terrestres."
+        ],
+        [
+          "Exploração científica",
+          "A Voyager 2 realizou a única passagem próxima até hoje; novas missões são propostas para investigar sua estrutura e luas."
+        ]
+      ],
+      "learnMore": "A inclinação de aproximadamente 98° pode estar relacionada a grandes impactos ou interações ocorridas no início da formação planetária, mas sua origem exata ainda é estudada."
+    }
+  },
+  {
+    "id": "mission-008",
+    "order": 8,
+    "title": "Ventos no limite",
+    "description": "A última investigação deste ciclo busca compreender a atmosfera dinâmica do planeta mais distante do Sol entre os oito planetas.",
+    "planet": "Netuno",
+    "objective": "Localize Netuno e analise seus ventos atmosféricos.",
+    "concept": "Atmosferas de gigantes gelados",
+    "question": "O que torna a atmosfera de Netuno especialmente notável?",
+    "alternatives": [
+      "Ela não apresenta nuvens nem tempestades",
+      "É composta apenas por oxigênio respirável",
+      "Possui alguns dos ventos mais rápidos observados no Sistema Solar",
+      "Permanece completamente imóvel por estar longe do Sol"
+    ],
+    "correctAnswer": 2,
+    "scientificFact": "Mesmo recebendo pouca energia solar, Netuno apresenta uma atmosfera muito ativa, com ventos que podem ultrapassar 2.000 km/h. Sua energia interna ajuda a alimentar essa dinâmica.",
+    "scanData": [
+      "Planeta mais distante do Sol entre os oito planetas",
+      "Ventos podem ultrapassar 2.000 km/h",
+      "Emite mais energia do que recebe do Sol"
+    ],
+    "additionalQuestions": [
+      {
+        "question": "O que ajuda a manter a atmosfera de Netuno ativa apesar da grande distância do Sol?",
+        "alternatives": [
+          "Uma fonte de energia interna do planeta",
+          "A ausência de qualquer gravidade",
+          "Luz produzida por seus oceanos",
+          "Calor recebido diretamente da Terra"
+        ],
+        "correctAnswer": 0
+      }
+    ],
+    "dossier": {
+      "overview": "Netuno é o planeta mais distante do Sol entre os oito planetas e possui uma atmosfera surpreendentemente ativa, alimentada também por energia interna.",
+      "sections": [
+        [
+          "Atmosfera e clima",
+          "Ventos extremamente rápidos e grandes tempestades são observados. Metano contribui para sua coloração azul."
+        ],
+        [
+          "Órbita e estrutura",
+          "Completa uma órbita em cerca de 165 anos. É classificado como gigante gelado por sua composição interna."
+        ],
+        [
+          "Exploração científica",
+          "A Voyager 2 foi a única sonda a visitá-lo de perto, revelando anéis, tempestades e detalhes de Tritão."
+        ]
+      ],
+      "learnMore": "Netuno emite mais energia do que recebe do Sol. Esse fluxo interno ajuda a sustentar movimentos atmosféricos mesmo a bilhões de quilômetros da principal fonte de luz do sistema."
+    }
+  },
+  {
+    "id": "mission-009",
+    "order": 9,
+    "type": "comparison",
+    "title": "Dois mundos sob o Sol",
+    "displayName": "Mercúrio × Vênus",
+    "planet": "Vênus",
+    "destination": "Vênus",
+    "targetBodies": [
+      "Mercúrio",
+      "Vênus"
+    ],
+    "description": "Compare os dois planetas mais próximos do Sol e descubra por que distância não é o único fator que determina a temperatura.",
+    "objective": "Localize Mercúrio e Vênus, em qualquer ordem.",
+    "concept": "Temperatura e efeito estufa",
+    "question": "Por que Vênus é mais quente que Mercúrio?",
+    "alternatives": [
+      "Porque é maior e produz luz própria",
+      "Porque sua atmosfera densa provoca um efeito estufa extremo",
+      "Porque Mercúrio é coberto por gelo",
+      "Porque Vênus está mais próximo do Sol"
+    ],
+    "correctAnswer": 1,
+    "additionalQuestions": [
+      {
+        "question": "Qual observação mostra a importância da atmosfera na temperatura?",
+        "alternatives": [
+          "Mercúrio tem pouca atmosfera e grande variação térmica; Vênus retém calor com sua atmosfera densa",
+          "Os dois possuem atmosferas idênticas",
+          "Nenhum deles recebe energia solar",
+          "Vênus possui oceanos terrestres"
+        ],
+        "correctAnswer": 0
+      }
+    ],
+    "scanData": [
+      "Mercúrio: quase sem atmosfera e com grandes variações térmicas",
+      "Vênus: atmosfera densa, rica em CO₂, e cerca de 467 °C",
+      "A distância solar atua junto com composição e pressão atmosférica"
+    ],
+    "scientificFact": "Vênus demonstra que a atmosfera pode ser decisiva para o clima: mesmo mais distante do Sol que Mercúrio, é o planeta mais quente.",
+    "dossier": {
+      "overview": "Mercúrio e Vênus recebem intensa radiação solar, mas evoluíram de formas muito diferentes. A comparação revela o papel da atmosfera na distribuição e retenção de energia.",
+      "sections": [
+        [
+          "Mercúrio",
+          "Quase sem atmosfera, alterna temperaturas extremas entre regiões iluminadas e escuras."
+        ],
+        [
+          "Vênus",
+          "Sua atmosfera densa de dióxido de carbono mantém um efeito estufa extremo."
+        ],
+        [
+          "Comparação científica",
+          "Proximidade do Sol, pressão e composição atmosférica precisam ser analisadas em conjunto."
+        ]
+      ],
+      "learnMore": "Temperatura planetária não depende apenas da distância ao Sol. Refletividade, rotação, circulação atmosférica e gases de efeito estufa também controlam o balanço de energia."
+    }
+  },
+  {
+    "id": "mission-010",
+    "order": 10,
+    "type": "multiTarget",
+    "title": "Escalas do tempo orbital",
+    "displayName": "Terra × Júpiter × Netuno",
+    "planet": "Netuno",
+    "destination": "Netuno",
+    "targetBodies": [
+      "Terra",
+      "Júpiter",
+      "Netuno"
+    ],
+    "description": "Construa uma comparação entre mundos internos e externos para analisar como a distância ao Sol influencia o período orbital.",
+    "objective": "Localize Terra, Júpiter e Netuno, em qualquer ordem.",
+    "concept": "Período orbital e distância",
+    "question": "Qual dos três planetas possui o maior período orbital?",
+    "alternatives": [
+      "Terra",
+      "Júpiter",
+      "Netuno",
+      "Todos possuem o mesmo período"
+    ],
+    "correctAnswer": 2,
+    "additionalQuestions": [
+      {
+        "question": "Qual tendência aparece ao comparar esses três planetas?",
+        "alternatives": [
+          "Planetas mais distantes completam órbitas em menos tempo",
+          "A distância não possui relação com o período",
+          "Planetas mais distantes tendem a possuir períodos orbitais maiores",
+          "Todos se movem na mesma órbita"
+        ],
+        "correctAnswer": 2
+      }
+    ],
+    "scanData": [
+      "Terra: aproximadamente 1 ano por órbita",
+      "Júpiter: aproximadamente 11,86 anos por órbita",
+      "Netuno: aproximadamente 165 anos por órbita"
+    ],
+    "scientificFact": "Quanto maior a órbita, maior tende a ser o período; além disso, planetas distantes se movem mais lentamente em média.",
+    "dossier": {
+      "overview": "Terra, Júpiter e Netuno representam escalas orbitais muito diferentes. Seus períodos crescem fortemente conforme aumenta a distância média ao Sol.",
+      "sections": [
+        [
+          "Terra",
+          "Define o ano terrestre ao completar sua órbita em cerca de 365 dias."
+        ],
+        [
+          "Júpiter",
+          "Leva quase 12 anos terrestres para completar uma volta."
+        ],
+        [
+          "Netuno",
+          "Sua enorme órbita exige aproximadamente 165 anos terrestres."
+        ]
+      ],
+      "learnMore": "A terceira lei de Kepler relaciona o quadrado do período orbital ao cubo do semieixo maior da órbita. Isso explica por que o período aumenta rapidamente nas regiões externas."
+    }
+  },
+  {
+    "id": "mission-011",
+    "order": 11,
+    "type": "mystery",
+    "title": "O planeta oculto",
+    "displayName": "Alvo confidencial",
+    "planet": "Saturno",
+    "destination": "Saturno",
+    "targetBodies": [
+      "Saturno"
+    ],
+    "description": "Identifique um gigante gasoso de baixa densidade média, cercado por um amplo sistema de partículas de gelo e rocha.",
+    "objective": "Use as pistas para selecionar o planeta misterioso.",
+    "concept": "Identificação por evidências",
+    "question": "Qual evidência foi mais específica para identificar Saturno?",
+    "alternatives": [
+      "Ser um planeta do Sistema Solar",
+      "Possuir gravidade",
+      "Apresentar um amplo e visível sistema de anéis",
+      "Realizar movimento orbital"
+    ],
+    "correctAnswer": 2,
+    "additionalQuestions": [
+      {
+        "question": "Os anéis de Saturno são melhor descritos como:",
+        "alternatives": [
+          "Um disco sólido único",
+          "Incontáveis partículas em órbita",
+          "Uma atmosfera achatada",
+          "Luz sem matéria"
+        ],
+        "correctAnswer": 1
+      }
+    ],
+    "scanData": [
+      "Classificação: gigante gasoso",
+      "Densidade média menor que a da água",
+      "Sistema de anéis composto por incontáveis partículas"
+    ],
+    "scientificFact": "Saturno não é o único planeta com anéis, mas possui o sistema mais amplo e facilmente observado do Sistema Solar.",
+    "dossier": {
+      "overview": "O cruzamento de pistas permite identificar corpos sem revelar seus nomes. Saturno combina baixa densidade média, composição gasosa e um sistema de anéis excepcional.",
+      "sections": [
+        [
+          "Evidência estrutural",
+          "É formado principalmente por hidrogênio e hélio e não possui superfície sólida definida."
+        ],
+        [
+          "Evidência orbital",
+          "Partículas de gelo e rocha formam numerosos anéis e divisões."
+        ],
+        [
+          "Método científico",
+          "Uma identificação confiável usa várias evidências, evitando depender de uma característica genérica."
+        ]
+      ],
+      "learnMore": "Júpiter, Urano e Netuno também possuem anéis. A combinação entre aparência, composição, densidade, luas e propriedades orbitais torna a identificação mais rigorosa."
+    }
+  },
+  {
+    "id": "mission-012", "order": 12, "type": "moon", "title": "A memória da Terra", "displayName": "Lua", "planet": "Lua", "destination": "Lua", "parentBody": "Terra", "targetBodies": ["Lua"],
+    "description": "inicie a campanha lunar investigando o único satélite natural da Terra e os registros preservados em sua superfície.",
+    "objective": "Localize a Lua orbitando a Terra.", "concept": "Superfície e marés",
+    "question": "Por que as pegadas das missões Apollo podem permanecer por tanto tempo na Lua?",
+    "alternatives": ["Porque a Lua produz uma resina protetora", "Porque quase não há atmosfera, vento ou chuva", "Porque o solo lunar se regenera", "Porque ficam sob uma camada de água"], "correctAnswer": 1,
+    "additionalQuestions": [{"question": "Qual efeito importante a gravidade da Lua exerce sobre a Terra?", "alternatives": ["Produz as estações do ano", "Impede a rotação terrestre", "Contribui para as marés oceânicas", "Cria o campo magnético terrestre"], "correctAnswer": 2}],
+    "scanData": ["Atmosfera: exosfera extremamente tênue", "Superfície: crateras, mares basálticos e regolito", "Órbita: cerca de 27,3 dias ao redor da Terra"],
+    "scientificFact": "A Lua ajuda a estabilizar a inclinação do eixo terrestre e influencia fortemente as marés.",
+    "dossier": {"overview": "A Lua preserva bilhões de anos de impactos e vulcanismo. Sem atmosfera densa e água corrente, sua superfície muda lentamente.", "sections": [["Ambiente", "Temperaturas extremas, quase nenhum ar e radiação atingem diretamente a superfície."], ["Órbita", "Sua rotação sincronizada faz com que quase sempre vejamos a mesma face."], ["Exploração", "Foi o primeiro corpo além da Terra visitado presencialmente por seres humanos."]], "learnMore": "Os mares lunares não contêm água: são extensas planícies de lava solidificada. Gelo de água foi detectado em regiões permanentemente sombreadas próximas aos polos."}
+  },
+  {
+    "id": "mission-013", "order": 13, "type": "moon", "title": "O oceano sob o gelo", "displayName": "Europa", "planet": "Europa", "destination": "Europa", "parentBody": "Júpiter", "targetBodies": ["Europa"],
+    "description": "os sensores indicam uma crosta jovem e fraturada escondendo um possível oceano global no sistema de Júpiter.",
+    "objective": "Localize Europa orbitando Júpiter.", "concept": "Oceano subterrâneo e habitabilidade",
+    "question": "Qual evidência torna Europa um alvo importante na busca por ambientes habitáveis?",
+    "alternatives": ["Uma floresta visível", "Um possível oceano salgado sob a crosta de gelo", "Uma atmosfera rica em oxigênio respirável", "Cidades observadas na superfície"], "correctAnswer": 1,
+    "additionalQuestions": [{"question": "Qual processo ajuda a manter o interior de Europa aquecido?", "alternatives": ["A luz refletida por Saturno", "Aquecimento de maré causado pela gravidade de Júpiter", "Combustão na superfície", "Ventos solares congelados"], "correctAnswer": 1}],
+    "scanData": ["Crosta: gelo fraturado e relativamente jovem", "Interior: forte evidência de oceano salgado", "Energia: aquecimento por forças de maré"],
+    "scientificFact": "O oceano de Europa pode conter mais água líquida do que todos os oceanos da Terra juntos.",
+    "dossier": {"overview": "Europa é uma lua gelada de Júpiter. Medições magnéticas e sua superfície fraturada sustentam a hipótese de um oceano global subterrâneo.", "sections": [["Superfície", "Gelo claro, sulcos e poucas crateras sugerem renovação geológica."], ["Interior", "O oceano provavelmente está entre a crosta e um manto rochoso."], ["Astrobiologia", "Água líquida, química e energia fazem de Europa um alvo prioritário."]], "learnMore": "A gravidade de Júpiter e das luas vizinhas deforma Europa repetidamente. Esse atrito libera calor e pode sustentar água líquida longe da luz solar."}
+  },
+  {
+    "id": "mission-014", "order": 14, "type": "moon", "title": "O mundo de fogo", "displayName": "Io", "planet": "Io", "destination": "Io", "parentBody": "Júpiter", "targetBodies": ["Io"],
+    "description": "investigue a lua mais vulcanicamente ativa conhecida, marcada por plumas e uma superfície constantemente renovada.",
+    "objective": "Localize Io orbitando Júpiter.", "concept": "Vulcanismo e forças de maré",
+    "question": "O que alimenta o vulcanismo extremo de Io?",
+    "alternatives": ["O calor direto do Sol", "Forças de maré, principalmente de Júpiter", "Incêndios de oxigênio", "Impactos diários de asteroides"], "correctAnswer": 1,
+    "additionalQuestions": [{"question": "Por que Io apresenta relativamente poucas crateras de impacto visíveis?", "alternatives": ["Nunca sofre impactos", "Sua atmosfera dissolve os meteoros", "O vulcanismo renova e recobre a superfície", "As crateras ficam somente no lado oculto"], "correctAnswer": 2}],
+    "scanData": ["Atividade: centenas de centros vulcânicos", "Superfície: compostos de enxofre e lava", "Fonte de calor: deformação gravitacional contínua"],
+    "scientificFact": "Algumas plumas vulcânicas de Io se elevam centenas de quilômetros acima da superfície.",
+    "dossier": {"overview": "Io é comprimida e esticada pela gravidade de Júpiter e pela ressonância orbital com Europa e Ganimedes.", "sections": [["Vulcanismo", "Lagos de lava, plumas e extensos fluxos remodelam a lua."], ["Composição", "Enxofre e dióxido de enxofre produzem tons amarelos, vermelhos e brancos."], ["Órbita", "A excentricidade mantida pelas luas vizinhas sustenta o aquecimento interno."]], "learnMore": "Io funciona como um laboratório natural de aquecimento de maré. O material que escapa também abastece um toro de plasma ao redor de Júpiter."}
+  },
+  {
+    "id": "mission-015", "order": 15, "type": "moon", "title": "Maior que Mercúrio", "displayName": "Ganimedes", "planet": "Ganimedes", "destination": "Ganimedes", "parentBody": "Júpiter", "targetBodies": ["Ganimedes"],
+    "description": "encontre a maior lua do Sistema Solar e analise uma propriedade magnética única entre satélites naturais.",
+    "objective": "Localize Ganimedes orbitando Júpiter.", "concept": "Tamanho e campo magnético",
+    "question": "Qual afirmação descreve corretamente o tamanho de Ganimedes?",
+    "alternatives": ["É menor que todas as luas de Marte", "É maior em diâmetro que Mercúrio", "É maior que a Terra", "Possui o mesmo diâmetro da Lua"], "correctAnswer": 1,
+    "additionalQuestions": [{"question": "Que característica torna Ganimedes única entre as luas conhecidas?", "alternatives": ["Possui anéis brilhantes", "Tem um campo magnético próprio", "Não possui gelo", "Orbita diretamente o Sol"], "correctAnswer": 1}],
+    "scanData": ["Diâmetro: aproximadamente 5.268 km", "Estrutura: rocha, gelo e provável oceano interno", "Magnetismo: campo magnético intrínseco"],
+    "scientificFact": "Ganimedes é maior que Mercúrio, embora tenha apenas cerca de metade de sua massa.",
+    "dossier": {"overview": "Ganimedes combina dimensões planetárias, superfície gelada, provável oceano subterrâneo e um campo magnético próprio.", "sections": [["Dimensões", "É a maior lua do Sistema Solar, com diâmetro superior ao de Mercúrio, embora tenha muito menos massa."], ["Superfície", "Terrenos escuros antigos convivem com regiões mais claras e sulcadas."], ["Interior", "Um núcleo metálico ajuda a gerar sua magnetosfera."]], "learnMore": "O campo magnético de Ganimedes cria uma pequena magnetosfera dentro da enorme magnetosfera de Júpiter. Auroras ajudam cientistas a estudar seu interior."}
+  },
+  {
+    "id": "mission-016", "order": 16, "type": "moon", "title": "Rios de metano", "displayName": "Titã", "planet": "Titã", "destination": "Titã", "parentBody": "Saturno", "targetBodies": ["Titã"],
+    "description": "atravesse a névoa alaranjada de uma lua com atmosfera espessa, lagos e chuva de hidrocarbonetos.",
+    "objective": "Localize Titã orbitando Saturno.", "concept": "Atmosfera e ciclo do metano",
+    "question": "Qual substância forma grande parte dos lagos e mares da superfície de Titã?",
+    "alternatives": ["Água líquida quente", "Metano e etano líquidos", "Ferro derretido", "Amônia em combustão"], "correctAnswer": 1,
+    "additionalQuestions": [{"question": "Qual gás domina a atmosfera de Titã?", "alternatives": ["Oxigênio", "Hidrogênio", "Nitrogênio", "Dióxido de enxofre"], "correctAnswer": 2}],
+    "scanData": ["Atmosfera: densa e dominada por nitrogênio", "Superfície: lagos e canais de metano e etano", "Temperatura: cerca de −179 °C"],
+    "scientificFact": "Titã é o único mundo além da Terra com líquidos estáveis conhecidos formando lagos e mares na superfície.",
+    "dossier": {"overview": "Titã possui clima, nuvens, chuva, rios e mares, mas seu ciclo meteorológico utiliza metano em vez de água.", "sections": [["Atmosfera", "Nitrogênio e uma névoa orgânica escondem a superfície na luz visível."], ["Clima", "Metano evapora, forma nuvens, precipita e retorna aos mares."], ["Exploração", "A sonda Huygens pousou em Titã em 2005 e transmitiu dados da superfície."]], "learnMore": "Sob a crosta gelada, Titã provavelmente também abriga um oceano de água. Sua química orgânica interessa à pesquisa sobre processos anteriores à vida."}
+  },
+  {
+    "id": "mission-017", "order": 17, "type": "moon", "title": "Gêiseres no vazio", "displayName": "Encélado", "planet": "Encélado", "destination": "Encélado", "parentBody": "Saturno", "targetBodies": ["Encélado"],
+    "description": "analise jatos de gelo e vapor que permitem estudar um oceano oculto sem perfurar a superfície.",
+    "objective": "Localize Encélado orbitando Saturno.", "concept": "Plumas e oceano subterrâneo",
+    "question": "De onde vêm as plumas observadas no polo sul de Encélado?",
+    "alternatives": ["De desertos de areia", "De um oceano subterrâneo através de fraturas", "Da atmosfera de Saturno", "De vulcões de ferro líquido"], "correctAnswer": 1,
+    "additionalQuestions": [{"question": "Por que as plumas facilitam o estudo do oceano de Encélado?", "alternatives": ["Levam material interno ao espaço, onde pode ser analisado", "Elas iluminam todo o oceano", "Eliminam a gravidade da lua", "Transformam água em rocha"], "correctAnswer": 0}],
+    "scanData": ["Polo sul: fraturas chamadas listras de tigre", "Plumas: vapor, gelo, sais e moléculas orgânicas", "Interior: oceano global sob a crosta"],
+    "scientificFact": "Partículas ejetadas por Encélado contribuem para formar o anel E de Saturno.",
+    "dossier": {"overview": "Encélado é pequeno, brilhante e geologicamente ativo. Seus jatos expõem diretamente amostras de um oceano subterrâneo.", "sections": [["Plumas", "Jatos escapam por fraturas aquecidas na região polar sul."], ["Oceano", "Água líquida interage com um fundo rochoso, criando possibilidades químicas interessantes."], ["Habitabilidade", "Água, sais, compostos orgânicos e energia foram detectados."]], "learnMore": "A Cassini atravessou as plumas e analisou suas partículas. Evidências de atividade hidrotermal sugerem reações entre água quente e rocha no fundo oceânico."}
+  },
+  {
+    "id": "mission-018", "order": 18, "type": "moon", "title": "A órbita ao contrário", "displayName": "Tritão", "planet": "Tritão", "destination": "Tritão", "parentBody": "Netuno", "targetBodies": ["Tritão"],
+    "description": "encerre a campanha investigando uma lua gelada que percorre uma órbita retrógrada ao redor de Netuno.",
+    "objective": "Localize Tritão orbitando Netuno.", "concept": "Captura gravitacional e órbita retrógrada",
+    "question": "O que significa dizer que Tritão possui órbita retrógrada?",
+    "alternatives": ["Ele não se move", "Orbita no sentido oposto à rotação de Netuno", "Orbita a Terra antes de Netuno", "Muda de sentido todos os dias"], "correctAnswer": 1,
+    "additionalQuestions": [{"question": "Qual hipótese explica melhor a órbita incomum de Tritão?", "alternatives": ["Formou-se dentro do Sol", "Foi capturado gravitacionalmente por Netuno", "É um fragmento da Terra", "Foi construído pelos anéis"], "correctAnswer": 1}],
+    "scanData": ["Órbita: retrógrada e muito inclinada", "Superfície: gelos de nitrogênio, metano e água", "Atividade: gêiseres escuros observados pela Voyager 2"],
+    "scientificFact": "A órbita retrógrada indica que Tritão provavelmente se formou no Cinturão de Kuiper e foi capturado por Netuno.",
+    "dossier": {"overview": "Tritão é a maior lua de Netuno e combina uma superfície jovem, atmosfera tênue e uma órbita que denuncia uma origem externa.", "sections": [["Órbita", "Move-se no sentido contrário ao da rotação do planeta, algo raro para uma lua grande."], ["Superfície", "É uma das superfícies mais frias conhecidas, coberta por gelos voláteis."], ["Evolução", "A interação de maré faz Tritão aproximar-se lentamente de Netuno."]], "learnMore": "Em um futuro muito distante, Tritão poderá atravessar o limite de Roche e se fragmentar, talvez formando um novo sistema de anéis ao redor de Netuno."}
+  },
+  {
+    "id":"mission-019","order":19,"type":"bonus","title":"O guardião do cinturão","displayName":"Ceres","planet":"Ceres","destination":"Ceres","targetBodies":["Ceres"],
+    "description":"inicie as investigações bônus encontrando o maior corpo do cinturão de asteroides entre Marte e Júpiter.","objective":"Localize Ceres no cinturão de asteroides.","concept":"Planetas anões e cinturão de asteroides",
+    "question":"Onde se concentra o cinturão principal de asteroides?","alternatives":["Entre a Terra e Marte","Entre Marte e Júpiter","Além do Cinturão de Kuiper","Dentro da atmosfera solar"],"correctAnswer":1,
+    "additionalQuestions":[{"question":"Por que Ceres é classificado como planeta anão?","alternatives":["Porque não orbita o Sol","Porque é apenas uma nuvem de gás","Porque é aproximadamente esférico, mas não limpou sua vizinhança orbital","Porque possui mais massa que Júpiter"],"correctAnswer":2}],
+    "scanData":["Localização: cinturão principal entre Marte e Júpiter","Diâmetro: aproximadamente 946 km","Composição: rocha, gelo e minerais hidratados"],
+    "scientificFact":"Ceres reúne cerca de um terço da massa estimada de todo o cinturão principal de asteroides.",
+    "dossier":{"overview":"Ceres é o maior corpo do cinturão principal e o único planeta anão localizado no Sistema Solar interior.","sections":[["Cinturão de asteroides","A região contém milhões de corpos, mas eles estão separados por grandes distâncias."],["Classificação","Ceres orbita o Sol e é quase esférico, porém compartilha sua região orbital com muitos objetos."],["Exploração","A sonda Dawn revelou crateras, depósitos brilhantes de sais e sinais de atividade geológica."]],"learnMore":"O cinturão não é uma barreira compacta como aparece em filmes. Sua massa total é pequena e as distâncias entre objetos geralmente são enormes."}
+  },
+  {
+    "id":"mission-020","order":20,"type":"bonus","title":"Além de Netuno","displayName":"Plutão","planet":"Plutão","destination":"Plutão","targetBodies":["Plutão"],
+    "description":"avance até o Cinturão de Kuiper para investigar um mundo gelado com montanhas, planícies e cinco luas conhecidas.","objective":"Localize Plutão além da órbita de Netuno.","concept":"Cinturão de Kuiper e classificação planetária",
+    "question":"Em qual região do Sistema Solar Plutão se encontra?","alternatives":["Cinturão de asteroides","Nuvens de Vênus","Cinturão de Kuiper","Órbita da Lua"],"correctAnswer":2,
+    "additionalQuestions":[{"question":"Qual critério Plutão não cumpre para ser classificado como planeta principal?","alternatives":["Orbitar o Sol","Possuir forma aproximadamente esférica","Ter limpado a vizinhança de sua órbita","Possuir uma superfície sólida"],"correctAnswer":2}],
+    "scanData":["Órbita: além de Netuno, excêntrica e inclinada","Superfície: gelos de nitrogênio, metano e monóxido de carbono","Sistema: cinco luas conhecidas, incluindo Caronte"],
+    "scientificFact":"A missão New Horizons revelou em Plutão montanhas de gelo e uma extensa planície em forma de coração.",
+    "dossier":{"overview":"Plutão é um planeta anão do Cinturão de Kuiper, região povoada por corpos gelados remanescentes da formação do Sistema Solar.","sections":[["Superfície","Gelos voláteis formam planícies, montanhas e terrenos surpreendentemente jovens."],["Órbita","Sua trajetória é mais inclinada e excêntrica que a dos oito planetas."],["Classificação","Compartilha sua zona orbital com muitos objetos do Cinturão de Kuiper."]],"learnMore":"Plutão e Caronte orbitam um centro de massa situado fora de Plutão. Por isso, o sistema às vezes é descrito informalmente como um planeta anão duplo."}
+  },
+  {
+    "id":"mission-021","order":21,"type":"bonus","title":"Mensageiro de gelo","displayName":"Cometa Halley","planet":"Cometa Halley","destination":"Cometa Halley","targetBodies":["Cometa Halley"],
+    "description":"encerre o arquivo bônus acompanhando um cometa periódico que atravessa as regiões internas e externas do Sistema Solar.","objective":"Localize o Cometa Halley em sua órbita alongada.","concept":"Cometas, caudas e órbitas excêntricas",
+    "question":"Por que a cauda de um cometa aponta geralmente para longe do Sol?","alternatives":["Porque o cometa sempre viaja de ré","Por causa da radiação e do vento solar","Porque Júpiter puxa a cauda","Porque a cauda é uma sombra"],"correctAnswer":1,
+    "additionalQuestions":[{"question":"O que uma órbita muito alongada faz o cometa experimentar?","alternatives":["A mesma distância do Sol durante todo o percurso","Grandes mudanças de distância e aquecimento","Ausência completa de movimento","Uma órbita exclusiva ao redor da Terra"],"correctAnswer":1}],
+    "scanData":["Núcleo: mistura escura de gelo, poeira e rocha","Órbita: muito excêntrica e retrógrada","Período: aproximadamente 75 a 76 anos"],
+    "scientificFact":"O Cometa Halley foi o primeiro cometa reconhecido como periódico; sua próxima passagem pelo interior do Sistema Solar ocorrerá em 2061.",
+    "dossier":{"overview":"O Cometa Halley visita periodicamente o Sistema Solar interior. Ao se aquecer, libera gás e poeira que formam coma e caudas.","sections":[["Núcleo","Gelos misturados a poeira permanecem relativamente inativos longe do Sol."],["Atividade","O aquecimento solar sublima os gelos e cria uma atmosfera temporária ao redor do núcleo."],["Caudas","Radiação e vento solar empurram partículas e gases para longe do Sol."]],"learnMore":"Um cometa pode apresentar uma cauda de poeira curva e outra de íons mais reta. A direção das caudas depende do Sol, não necessariamente do sentido do movimento do cometa."}
+  }
+]

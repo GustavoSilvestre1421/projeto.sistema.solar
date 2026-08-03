@@ -1,0 +1,20 @@
+{
+  "name": "Projeto Gaia — Sistema Solar 3D",
+  "id": "projeto-gaia",
+  "short_name": "Projeto Gaia",
+  "description": "Simulador educacional do Sistema Solar com exploração 3D e missões científicas.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#020714",
+  "theme_color": "#061426",
+  "icons": [
+    { "src": "assets/icons/gaia-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/gaia-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    { "src": "assets/images/gaia-share.jpg", "sizes": "1200x630", "type": "image/jpeg", "form_factor": "wide", "label": "Exploração do Sistema Solar no Projeto Gaia" }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "mission-001": {
+    "title": "The blue planet", "displayName": "Earth", "description": "investigate the world whose surface conditions allow stable liquid water and life as we know it.", "objective": "Locate Earth in the Solar System.",
+    "questions": [
+      {"question":"Which combination best explains the presence of liquid water on Earth's surface?","alternatives":["Suitable temperature and sufficient atmospheric pressure","Only its distance from the Sun","The absence of an atmosphere","Its unusually small diameter"],"correctAnswer":0},
+      {"question":"Why is Earth's atmosphere essential to habitability?","alternatives":["It blocks all sunlight","It maintains conditions for liquid water and life","It prevents the planet from rotating","It removes all surface heat"],"correctAnswer":1}
+    ],
+    "scanData":["Average surface temperature: about 15 °C","Atmosphere: mostly nitrogen and oxygen","Surface: about 71% covered by liquid water"],
+    "scientificFact":"Earth is the only known world with stable surface oceans and confirmed life.",
+    "dossier":{"overview":"Earth combines liquid water, a protective atmosphere, geological activity and a suitable temperature range.","sections":[["Atmosphere and environment","Atmospheric pressure and a moderate greenhouse effect help keep water liquid."],["Orbit and structure","Its nearly circular orbit and rocky structure support relatively stable conditions."],["Scientific exploration","Satellites monitor climate, oceans, vegetation and changes across the planet."]],"learnMore":"Habitability depends on several interacting factors. Distance from the Sun alone is not enough: atmospheric composition, pressure, magnetic protection and long-term climate stability also matter."}
+  },
+  "mission-002": {
+    "title":"Traces of ancient rivers","displayName":"Mars","description":"search for evidence that liquid water once flowed across the surface of a cold desert world.","objective":"Locate Mars and collect evidence of its watery past.",
+    "questions":[{"question":"Which Martian features provide strong evidence of ancient liquid water?","alternatives":["An extremely strong global magnetic field","River valleys, deltas and water-altered minerals","A ring system around the planet","An oxygen-rich atmosphere"],"correctAnswer":1},{"question":"Why is stable liquid water rare on the Martian surface today?","alternatives":["Mars has no gravity","Low pressure and cold temperatures favor freezing or evaporation","Its atmosphere is denser than Earth's","Mars is inside the Sun"],"correctAnswer":1}],
+    "scanData":["Surface: valleys, deltas and sedimentary deposits","Atmosphere: thin and dominated by carbon dioxide","Present water: mostly ice at the poles and underground"],
+    "scientificFact":"Mars preserves minerals and landforms formed by water billions of years ago.",
+    "dossier":{"overview":"Mars was once warmer and wetter. Ancient channels and deltas record environments very different from the cold desert seen today.","sections":[["Atmosphere and environment","A thin atmosphere produces low pressure, strong temperature changes and little protection."],["Physical features","Volcanoes, canyons, impact basins and polar ice caps shape the planet."],["Exploration","Orbiters, landers and rovers study rocks, climate and possible past habitability."]],"learnMore":"Rovers have found sedimentary rocks and clay minerals that formed in water. Scientists investigate whether ancient lakes could once have supported microbial environments."}
+  },
+  "mission-003": {
+    "title":"The giant guardian","displayName":"Jupiter","description":"investigate the most massive planet and the intense gravitational environment around it.","objective":"Locate Jupiter, the largest planet in the Solar System.",
+    "questions":[{"question":"Why does Jupiter strongly influence other bodies in the Solar System?","alternatives":["It does not orbit","It is the closest planet to the Sun","Its great mass creates an intense gravitational field","Its atmosphere blocks solar gravity"],"correctAnswer":2},{"question":"Why does Jupiter lack a defined solid surface?","alternatives":["It is mostly hydrogen and helium","It is completely hollow","It has no atmosphere","Its surface is covered by terrestrial oceans"],"correctAnswer":0}],
+    "scanData":["Mass: more than twice that of all other planets combined","Composition: mostly hydrogen and helium","Atmosphere: bands, storms and the Great Red Spot"],
+    "scientificFact":"Jupiter's Great Red Spot is a gigantic storm observed for centuries.",
+    "dossier":{"overview":"Jupiter is a gas giant whose mass, rapid rotation, storms and powerful magnetic field dominate the outer Solar System.","sections":[["Atmosphere","Colorful bands move at different speeds and feed long-lived storms."],["Physical structure","Pressure rises gradually inward; there is no ordinary solid surface."],["Exploration","Spacecraft study its atmosphere, magnetosphere, rings and large family of moons."]],"learnMore":"Jupiter can redirect comets and asteroids, but its gravity may both protect and threaten the inner planets depending on an object's trajectory."}
+  },
+  "mission-004": {
+    "title":"A world under pressure","displayName":"Venus","description":"analyze why a planet similar in size to Earth became the hottest world in the Solar System.","objective":"Locate Venus and investigate its extreme atmosphere.",
+    "questions":[{"question":"Which Venusian characteristic traps enormous amounts of heat?","alternatives":["A complete absence of atmospheric gases","A dense atmosphere rich in carbon dioxide","Large oceans of liquid water","A rotation much faster than Earth's"],"correctAnswer":1},{"question":"Why is Venus hotter than Mercury?","alternatives":["Venus shines like a star","Its extremely intense greenhouse effect retains heat","Mercury has frozen oceans","Venus receives no sunlight"],"correctAnswer":1}],
+    "scanData":["Surface temperature: about 467 °C","Atmosphere: mostly carbon dioxide","Surface pressure: about 93 times Earth's"],
+    "scientificFact":"Venus is hotter than Mercury even though Mercury is closer to the Sun.",
+    "dossier":{"overview":"Venus is similar to Earth in size but its dense carbon-dioxide atmosphere created a runaway greenhouse environment.","sections":[["Atmosphere and environment","Thick clouds contain sulfuric acid droplets and hide the surface."],["Orbit and rotation","Venus rotates very slowly and in the opposite direction to most planets."],["Exploration","Radar and landers reveal volcanic plains, mountains and crushing pressure."]],"learnMore":"Venus shows how atmospheric composition can transform a rocky planet. Studying it helps scientists understand climate evolution on Earth-sized worlds."}
+  },
+  "mission-005": {
+    "title":"The fastest orbit","displayName":"Mercury","description":"find the planet that completes the shortest journey around the Sun and experiences extreme temperatures.","objective":"Locate Mercury, the innermost planet.",
+    "questions":[{"question":"Why does Mercury have the shortest year?","alternatives":["It is close to the Sun, follows a smaller orbit and moves quickly","It has the greatest number of moons","Solar gravity does not affect it","It stays still while the Sun revolves around it"],"correctAnswer":0},{"question":"Mercury's orbital speed:","alternatives":["Always remains exactly the same","Is greater when the planet is closer to the Sun","Falls to zero at the farthest point","Depends only on its rotation"],"correctAnswer":1}],
+    "scanData":["Orbital period: about 88 Earth days","Surface: heavily cratered and rocky","Atmosphere: an extremely thin exosphere"],
+    "scientificFact":"A solar day on Mercury lasts about 176 Earth days—twice its year.",
+    "dossier":{"overview":"Mercury is a small rocky world close to the Sun, with a large metal core and a surface shaped by impacts.","sections":[["Environment","Without a thick atmosphere, daytime and nighttime temperatures differ dramatically."],["Orbit","Its eccentric orbit is completed in only 88 Earth days."],["Exploration","Spacecraft map its craters, magnetic field, composition and polar ice deposits."]],"learnMore":"Despite its proximity to the Sun, permanently shadowed polar craters contain water ice because sunlight never reaches their floors."}
+  },
+  "mission-006": {
+    "title":"Archives of ice and rock","displayName":"Saturn","description":"investigate a low-density gas giant surrounded by an extraordinary system of rings.","objective":"Locate Saturn and analyze its rings and internal structure.",
+    "questions":[{"question":"What are Saturn's rings mainly made of?","alternatives":["A continuous solid surface","Glowing gases released by the planet","Countless particles of ice, dust and rock","Liquid water held by a lack of gravity"],"correctAnswer":2},{"question":"What does Saturn's low average density indicate?","alternatives":["It has no mass","Every part of the planet is empty","Its mass is distributed through a very large volume","Its rings are made of liquid water"],"correctAnswer":2}],
+    "scanData":["Composition: mostly hydrogen and helium","Rings: numerous bands of ice and rocky particles","Average density: lower than liquid water"],
+    "scientificFact":"Saturn's rings are enormous in width but surprisingly thin compared with their diameter.",
+    "dossier":{"overview":"Saturn is a gas giant recognized by its broad ring system, rapid rotation and numerous moons.","sections":[["Atmosphere","Hydrogen, helium, clouds and storms form subtle colored bands."],["Rings and structure","Ring particles range from dust grains to blocks of ice and rock."],["Exploration","The Cassini mission transformed our knowledge of Saturn, its rings and moons."]],"learnMore":"Gaps and waves in the rings reveal the gravity of moons and embedded moonlets. The system is dynamic and continues to evolve."}
+  },
+  "mission-007": {
+    "title":"A planet on its side",
+    "displayName":"Uranus",
+    "description":"the sensors detected extreme seasons on an ice giant whose rotation axis has an unusual tilt.",
+    "objective":"Find Uranus and investigate its axial tilt.",
+    "questions":[
+      {"question":"Which consequence is associated with Uranus's extreme axial tilt?","alternatives":["The planet stopped orbiting the Sun","Its poles can remain pointed toward the Sun for long periods","Its gravity disappears during part of its orbit","Its atmosphere becomes a solid surface"],"correctAnswer":1},
+      {"question":"Which gas helps produce Uranus's blue-green appearance?","alternatives":["Oxygen","Methane","Iron vapor","Liquid nitrogen"],"correctAnswer":1}
+    ],
+    "scanData":["Axial tilt: approximately 98°","Atmosphere contains hydrogen, helium and methane","Each season lasts about 21 Earth years"],
+    "scientificFact":"Uranus's axis is tilted by about 98°. During parts of its long orbit, one pole points toward the Sun, producing extremely long seasons.",
+    "dossier":{"overview":"Uranus is an ice giant whose rotation axis lies almost on its side, a feature that produces extremely long seasons.","sections":[["Atmosphere","Hydrogen, helium and methane are present. Methane absorbs some red light and contributes to the blue-green appearance."],["Orbit and tilt","It takes about 84 years to orbit the Sun. Each season lasts approximately 21 Earth years."],["Scientific exploration","Voyager 2 made the only close flyby to date; new missions have been proposed to investigate its structure and moons."]],"learnMore":"The approximately 98° tilt may be related to major impacts or interactions early in planetary formation, but its exact origin is still under study."}
+  },
+  "mission-008": {
+    "title":"Winds at the limit",
+    "displayName":"Neptune",
+    "description":"the final investigation in this cycle seeks to understand the dynamic atmosphere of the most distant of the eight planets.",
+    "objective":"Find Neptune and analyze its atmospheric winds.",
+    "questions":[
+      {"question":"What makes Neptune's atmosphere especially remarkable?","alternatives":["It has no clouds or storms","It is made only of breathable oxygen","It has some of the fastest winds observed in the Solar System","It remains completely still because it is far from the Sun"],"correctAnswer":2},
+      {"question":"What helps keep Neptune's atmosphere active despite its great distance from the Sun?","alternatives":["An internal source of planetary energy","The complete absence of gravity","Light produced by its oceans","Heat received directly from Earth"],"correctAnswer":0}
+    ],
+    "scanData":["Most distant of the eight planets from the Sun","Winds can exceed 2,000 km/h","Emits more energy than it receives from the Sun"],
+    "scientificFact":"Even though it receives little solar energy, Neptune has a very active atmosphere, with winds that can exceed 2,000 km/h. Its internal energy helps power this activity.",
+    "dossier":{"overview":"Neptune is the most distant of the eight planets and has a surprisingly active atmosphere, also powered by internal energy.","sections":[["Atmosphere and climate","Extremely fast winds and large storms are observed. Methane contributes to its blue color."],["Orbit and structure","It completes one orbit in about 165 years. It is classified as an ice giant because of its internal composition."],["Scientific exploration","Voyager 2 was the only probe to visit it closely, revealing rings, storms and details of Triton."]],"learnMore":"Neptune emits more energy than it receives from the Sun. This internal flow helps sustain atmospheric motion even billions of kilometers from the system's main light source."}
+  },
+  "mission-009": {
+    "title":"Two worlds under the Sun",
+    "displayName":"Mercury × Venus",
+    "description":"compare the two planets closest to the Sun and discover why distance is not the only factor that determines temperature.",
+    "objective":"Find Mercury and Venus, in any order.",
+    "questions":[
+      {"question":"Why is Venus hotter than Mercury?","alternatives":["Because it is larger and produces its own light","Because its dense atmosphere causes an extreme greenhouse effect","Because Mercury is covered in ice","Because Venus is closer to the Sun"],"correctAnswer":1},
+      {"question":"Which observation demonstrates the importance of an atmosphere to temperature?","alternatives":["Mercury has little atmosphere and large temperature swings; Venus retains heat with its dense atmosphere","Both have identical atmospheres","Neither receives solar energy","Venus has Earth-like oceans"],"correctAnswer":0}
+    ],
+    "scanData":["Mercury: almost no atmosphere and large temperature swings","Venus: dense CO₂-rich atmosphere and about 467 °C","Solar distance acts together with atmospheric composition and pressure"],
+    "scientificFact":"Venus demonstrates that an atmosphere can be decisive for climate: although farther from the Sun than Mercury, it is the hottest planet.",
+    "dossier":{"overview":"Mercury and Venus receive intense solar radiation but evolved very differently. Comparing them reveals the atmosphere's role in distributing and retaining energy.","sections":[["Mercury","With almost no atmosphere, it alternates between extreme temperatures in illuminated and dark regions."],["Venus","Its dense carbon dioxide atmosphere maintains an extreme greenhouse effect."],["Scientific comparison","Proximity to the Sun, pressure and atmospheric composition must be analyzed together."]],"learnMore":"Planetary temperature does not depend only on distance from the Sun. Reflectivity, rotation, atmospheric circulation and greenhouse gases also control the energy balance."}
+  },
+  "mission-010": {
+    "title":"Scales of orbital time",
+    "displayName":"Earth × Jupiter × Neptune",
+    "description":"build a comparison between inner and outer worlds to analyze how distance from the Sun influences orbital period.",
+    "objective":"Find Earth, Jupiter and Neptune, in any order.",
+    "questions":[
+      {"question":"Which of the three planets has the longest orbital period?","alternatives":["Earth","Jupiter","Neptune","All have the same period"],"correctAnswer":2},
+      {"question":"Which trend appears when comparing these three planets?","alternatives":["More distant planets complete orbits in less time","Distance has no relationship with period","More distant planets tend to have longer orbital periods","All travel along the same orbit"],"correctAnswer":2}
+    ],
+    "scanData":["Earth: approximately 1 year per orbit","Jupiter: approximately 11.86 years per orbit","Neptune: approximately 165 years per orbit"],
+    "scientificFact":"The larger the orbit, the longer its period tends to be; in addition, distant planets move more slowly on average.",
+    "dossier":{"overview":"Earth, Jupiter and Neptune represent very different orbital scales. Their periods grow strongly as their average distance from the Sun increases.","sections":[["Earth","Defines the Earth year by completing its orbit in about 365 days."],["Jupiter","Takes almost 12 Earth years to complete one revolution."],["Neptune","Its enormous orbit requires approximately 165 Earth years."]],"learnMore":"Kepler's third law relates the square of the orbital period to the cube of the orbit's semi-major axis. This explains why the period increases rapidly in the outer regions."}
+  },
+  "mission-011": {
+    "title":"The hidden planet",
+    "displayName":"Classified target",
+    "description":"identify a gas giant with low average density, surrounded by a broad system of ice and rock particles.",
+    "objective":"Use the clues to select the mystery planet.",
+    "questions":[
+      {"question":"Which clue was most specific for identifying Saturn?","alternatives":["Being a planet in the Solar System","Having gravity","Displaying a broad and visible ring system","Performing orbital motion"],"correctAnswer":2},
+      {"question":"Saturn's rings are best described as:","alternatives":["A single solid disk","Countless particles in orbit","A flattened atmosphere","Light without matter"],"correctAnswer":1}
+    ],
+    "scanData":["Classification: gas giant","Average density lower than water","Ring system composed of countless particles"],
+    "scientificFact":"Saturn is not the only planet with rings, but it has the broadest and most easily observed ring system in the Solar System.",
+    "dossier":{"overview":"Cross-referencing clues makes it possible to identify bodies without revealing their names. Saturn combines low average density, gaseous composition and an exceptional ring system.","sections":[["Structural evidence","It is composed mainly of hydrogen and helium and has no defined solid surface."],["Orbital evidence","Ice and rock particles form numerous rings and divisions."],["Scientific method","A reliable identification uses several clues instead of relying on a generic characteristic."]],"learnMore":"Jupiter, Uranus and Neptune also have rings. Combining appearance, composition, density, moons and orbital properties makes identification more rigorous."}
+  },
+  "mission-012": {
+    "title":"Earth's memory",
+    "displayName":"Moon",
+    "description":"begin the lunar campaign by investigating Earth's only natural satellite and the records preserved on its surface.",
+    "objective":"Find the Moon orbiting Earth.",
+    "questions":[
+      {"question":"Why can footprints from the Apollo missions remain on the Moon for so long?","alternatives":["Because the Moon produces a protective resin","Because there is almost no atmosphere, wind or rain","Because lunar soil regenerates","Because they are under a layer of water"],"correctAnswer":1},
+      {"question":"Which important effect does the Moon's gravity have on Earth?","alternatives":["It produces the seasons","It stops Earth's rotation","It contributes to ocean tides","It creates Earth's magnetic field"],"correctAnswer":2}
+    ],
+    "scanData":["Atmosphere: extremely tenuous exosphere","Surface: craters, basaltic maria and regolith","Orbit: about 27.3 days around Earth"],
+    "scientificFact":"The Moon helps stabilize the tilt of Earth's axis and strongly influences the tides.",
+    "dossier":{"overview":"The Moon preserves billions of years of impacts and volcanism. Without a dense atmosphere or flowing water, its surface changes slowly.","sections":[["Environment","Extreme temperatures, almost no air and direct exposure to radiation characterize the surface."],["Orbit","Its synchronous rotation means that we almost always see the same side."],["Exploration","It was the first body beyond Earth visited in person by human beings."]],"learnMore":"The lunar maria contain no water: they are extensive plains of solidified lava. Water ice has been detected in permanently shadowed regions near the poles."}
+  },
+  "mission-013": {
+    "title":"The ocean beneath the ice",
+    "displayName":"Europa",
+    "description":"the sensors indicate a young, fractured crust concealing a possible global ocean in the Jupiter system.",
+    "objective":"Find Europa orbiting Jupiter.",
+    "questions":[
+      {"question":"Which evidence makes Europa an important target in the search for habitable environments?","alternatives":["A visible forest","A possible salty ocean beneath the ice crust","An atmosphere rich in breathable oxygen","Cities observed on the surface"],"correctAnswer":1},
+      {"question":"Which process helps keep Europa's interior warm?","alternatives":["Light reflected by Saturn","Tidal heating caused by Jupiter's gravity","Combustion on the surface","Frozen solar winds"],"correctAnswer":1}
+    ],
+    "scanData":["Crust: fractured and relatively young ice","Interior: strong evidence of a salty ocean","Energy: heating by tidal forces"],
+    "scientificFact":"Europa's ocean may contain more liquid water than all of Earth's oceans combined.",
+    "dossier":{"overview":"Europa is an icy moon of Jupiter. Magnetic measurements and its fractured surface support the hypothesis of a global subsurface ocean.","sections":[["Surface","Bright ice, grooves and few craters suggest geological renewal."],["Interior","The ocean probably lies between the crust and a rocky mantle."],["Astrobiology","Liquid water, chemistry and energy make Europa a priority target."]],"learnMore":"The gravity of Jupiter and neighboring moons repeatedly deforms Europa. This friction releases heat and may sustain liquid water far from sunlight."}
+  },
+  "mission-014": {
+    "title":"The world of fire",
+    "displayName":"Io",
+    "description":"investigate the most volcanically active known moon, marked by plumes and a constantly renewed surface.",
+    "objective":"Find Io orbiting Jupiter.",
+    "questions":[
+      {"question":"What powers Io's extreme volcanism?","alternatives":["Direct heat from the Sun","Tidal forces, mainly from Jupiter","Oxygen fires","Daily asteroid impacts"],"correctAnswer":1},
+      {"question":"Why does Io have relatively few visible impact craters?","alternatives":["It is never struck","Its atmosphere dissolves meteors","Volcanism renews and covers the surface","Craters occur only on the hidden side"],"correctAnswer":2}
+    ],
+    "scanData":["Activity: hundreds of volcanic centers","Surface: sulfur compounds and lava","Heat source: continuous gravitational deformation"],
+    "scientificFact":"Some of Io's volcanic plumes rise hundreds of kilometers above the surface.",
+    "dossier":{"overview":"Io is compressed and stretched by Jupiter's gravity and by orbital resonance with Europa and Ganymede.","sections":[["Volcanism","Lava lakes, plumes and extensive flows reshape the moon."],["Composition","Sulfur and sulfur dioxide produce yellow, red and white tones."],["Orbit","Eccentricity maintained by neighboring moons sustains internal heating."]],"learnMore":"Io acts as a natural laboratory for tidal heating. Escaping material also supplies a plasma torus around Jupiter."}
+  },
+  "mission-015": {
+    "title":"Larger than Mercury",
+    "displayName":"Ganymede",
+    "description":"find the largest moon in the Solar System and analyze a magnetic property unique among natural satellites.",
+    "objective":"Find Ganymede orbiting Jupiter.",
+    "questions":[
+      {"question":"Which statement correctly describes Ganymede's size?","alternatives":["It is smaller than all of Mars's moons","It is larger in diameter than Mercury","It is larger than Earth","It has the same diameter as the Moon"],"correctAnswer":1},
+      {"question":"Which feature makes Ganymede unique among known moons?","alternatives":["It has bright rings","It has its own magnetic field","It has no ice","It orbits the Sun directly"],"correctAnswer":1}
+    ],
+    "scanData":["Diameter: approximately 5,268 km","Structure: rock, ice and a probable internal ocean","Magnetism: intrinsic magnetic field"],
+    "scientificFact":"Ganymede is larger than Mercury, although it has only about half its mass.",
+    "dossier":{"overview":"Ganymede combines planetary dimensions, an icy surface, a probable subsurface ocean and its own magnetic field.","sections":[["Dimensions","It is the largest moon in the Solar System, with a diameter greater than Mercury's but much less mass."],["Surface","Ancient dark terrain exists alongside brighter, grooved regions."],["Interior","A metallic core helps generate its magnetosphere."]],"learnMore":"Ganymede's magnetic field creates a small magnetosphere inside Jupiter's enormous magnetosphere. Auroras help scientists study its interior."}
+  },
+  "mission-016": {
+    "title":"Methane rivers",
+    "displayName":"Titan",
+    "description":"cross the orange haze of a moon with a thick atmosphere, lakes and hydrocarbon rain.",
+    "objective":"Find Titan orbiting Saturn.",
+    "questions":[
+      {"question":"Which substances form much of the lakes and seas on Titan's surface?","alternatives":["Warm liquid water","Liquid methane and ethane","Molten iron","Burning ammonia"],"correctAnswer":1},
+      {"question":"Which gas dominates Titan's atmosphere?","alternatives":["Oxygen","Hydrogen","Nitrogen","Sulfur dioxide"],"correctAnswer":2}
+    ],
+    "scanData":["Atmosphere: dense and dominated by nitrogen","Surface: lakes and channels of methane and ethane","Temperature: about −179 °C"],
+    "scientificFact":"Titan is the only known world beyond Earth with stable liquids forming lakes and seas on its surface.",
+    "dossier":{"overview":"Titan has weather, clouds, rain, rivers and seas, but its meteorological cycle uses methane instead of water.","sections":[["Atmosphere","Nitrogen and an organic haze conceal the surface in visible light."],["Climate","Methane evaporates, forms clouds, precipitates and returns to the seas."],["Exploration","The Huygens probe landed on Titan in 2005 and transmitted data from the surface."]],"learnMore":"Beneath its icy crust, Titan probably also harbors an ocean of water. Its organic chemistry is relevant to research on processes that precede life."}
+  },
+  "mission-017": {
+    "title":"Geysers in the void",
+    "displayName":"Enceladus",
+    "description":"analyze jets of ice and vapor that make it possible to study a hidden ocean without drilling through the surface.",
+    "objective":"Find Enceladus orbiting Saturn.",
+    "questions":[
+      {"question":"Where do the plumes observed at Enceladus's south pole come from?","alternatives":["Sand deserts","A subsurface ocean through fractures","Saturn's atmosphere","Liquid-iron volcanoes"],"correctAnswer":1},
+      {"question":"Why do the plumes make Enceladus's ocean easier to study?","alternatives":["They carry internal material into space, where it can be analyzed","They illuminate the entire ocean","They eliminate the moon's gravity","They turn water into rock"],"correctAnswer":0}
+    ],
+    "scanData":["South pole: fractures called tiger stripes","Plumes: vapor, ice, salts and organic molecules","Interior: global ocean beneath the crust"],
+    "scientificFact":"Particles ejected by Enceladus help form Saturn's E ring.",
+    "dossier":{"overview":"Enceladus is small, bright and geologically active. Its jets directly expose samples from a subsurface ocean.","sections":[["Plumes","Jets escape through heated fractures in the south polar region."],["Ocean","Liquid water interacts with a rocky seafloor, creating interesting chemical possibilities."],["Habitability","Water, salts, organic compounds and energy have been detected."]],"learnMore":"Cassini flew through the plumes and analyzed their particles. Evidence of hydrothermal activity suggests reactions between hot water and rock on the ocean floor."}
+  },
+  "mission-018": {
+    "title":"The backward orbit",
+    "displayName":"Triton",
+    "description":"conclude the campaign by investigating an icy moon traveling in a retrograde orbit around Neptune.",
+    "objective":"Find Triton orbiting Neptune.",
+    "questions":[
+      {"question":"What does it mean to say that Triton has a retrograde orbit?","alternatives":["It does not move","It orbits in the direction opposite to Neptune's rotation","It orbits Earth before Neptune","It changes direction every day"],"correctAnswer":1},
+      {"question":"Which hypothesis best explains Triton's unusual orbit?","alternatives":["It formed inside the Sun","It was gravitationally captured by Neptune","It is a fragment of Earth","It was built by the rings"],"correctAnswer":1}
+    ],
+    "scanData":["Orbit: retrograde and highly inclined","Surface: nitrogen, methane and water ices","Activity: dark geysers observed by Voyager 2"],
+    "scientificFact":"Its retrograde orbit indicates that Triton probably formed in the Kuiper Belt and was captured by Neptune.",
+    "dossier":{"overview":"Triton is Neptune's largest moon and combines a young surface, a tenuous atmosphere and an orbit that reveals an external origin.","sections":[["Orbit","It moves in the direction opposite to the planet's rotation, which is rare for a large moon."],["Surface","It is one of the coldest known surfaces, covered by volatile ices."],["Evolution","Tidal interaction causes Triton to slowly approach Neptune."]],"learnMore":"In the distant future, Triton may cross the Roche limit and break apart, perhaps forming a new ring system around Neptune."}
+  },
+  "mission-019":{"title":"Guardian of the belt","displayName":"Ceres","description":"begin the bonus investigations by finding the largest body in the asteroid belt between Mars and Jupiter.","objective":"Find Ceres in the asteroid belt.","questions":[{"question":"Where is the main asteroid belt concentrated?","alternatives":["Between Earth and Mars","Between Mars and Jupiter","Beyond the Kuiper Belt","Inside the solar atmosphere"],"correctAnswer":1},{"question":"Why is Ceres classified as a dwarf planet?","alternatives":["Because it does not orbit the Sun","Because it is only a cloud of gas","Because it is nearly spherical but has not cleared its orbital neighborhood","Because it has more mass than Jupiter"],"correctAnswer":2}],"scanData":["Location: main belt between Mars and Jupiter","Diameter: approximately 946 km","Composition: rock, ice and hydrated minerals"],"scientificFact":"Ceres contains about one third of the estimated mass of the entire main asteroid belt.","dossier":{"overview":"Ceres is the largest body in the main belt and the only dwarf planet located in the inner Solar System.","sections":[["Asteroid belt","The region contains millions of bodies, but they are separated by great distances."],["Classification","Ceres orbits the Sun and is nearly spherical, but shares its orbital region with many objects."],["Exploration","The Dawn spacecraft revealed craters, bright salt deposits and signs of geological activity."]],"learnMore":"The belt is not a compact barrier like those shown in movies. Its total mass is small, and distances between objects are generally enormous."}},
+  "mission-020":{"title":"Beyond Neptune","displayName":"Pluto","description":"travel to the Kuiper Belt to investigate an icy world with mountains, plains and five known moons.","objective":"Find Pluto beyond Neptune's orbit.","questions":[{"question":"In which region of the Solar System is Pluto located?","alternatives":["Asteroid belt","Clouds of Venus","Kuiper Belt","Orbit of the Moon"],"correctAnswer":2},{"question":"Which requirement does Pluto not meet to be classified as a major planet?","alternatives":["Orbiting the Sun","Having a nearly spherical shape","Having cleared the neighborhood of its orbit","Having a solid surface"],"correctAnswer":2}],"scanData":["Orbit: beyond Neptune, eccentric and inclined","Surface: nitrogen, methane and carbon monoxide ices","System: five known moons, including Charon"],"scientificFact":"The New Horizons mission revealed ice mountains and a vast heart-shaped plain on Pluto.","dossier":{"overview":"Pluto is a dwarf planet in the Kuiper Belt, a region populated by icy bodies left over from the formation of the Solar System.","sections":[["Surface","Volatile ices form plains, mountains and surprisingly young terrain."],["Orbit","Its path is more inclined and eccentric than those of the eight planets."],["Classification","It shares its orbital zone with many Kuiper Belt objects."]],"learnMore":"Pluto and Charon orbit a center of mass located outside Pluto. For this reason, the system is sometimes informally described as a double dwarf planet."}},
+  "mission-021":{"title":"Messenger of ice","displayName":"Halley's Comet","description":"complete the bonus archive by following a periodic comet that crosses the inner and outer regions of the Solar System.","objective":"Find Halley's Comet in its elongated orbit.","questions":[{"question":"Why does a comet's tail generally point away from the Sun?","alternatives":["Because the comet always travels backward","Because of solar radiation and the solar wind","Because Jupiter pulls the tail","Because the tail is a shadow"],"correctAnswer":1},{"question":"What does a highly elongated orbit cause the comet to experience?","alternatives":["The same distance from the Sun throughout its path","Large changes in distance and heating","A complete absence of motion","An orbit exclusively around Earth"],"correctAnswer":1}],"scanData":["Nucleus: dark mixture of ice, dust and rock","Orbit: highly eccentric and retrograde","Period: approximately 75 to 76 years"],"scientificFact":"Halley's Comet was the first comet recognized as periodic; its next passage through the inner Solar System will occur in 2061.","dossier":{"overview":"Halley's Comet periodically visits the inner Solar System. As it warms, it releases gas and dust that form a coma and tails.","sections":[["Nucleus","Ices mixed with dust remain relatively inactive far from the Sun."],["Activity","Solar heating sublimates the ices and creates a temporary atmosphere around the nucleus."],["Tails","Radiation and the solar wind push particles and gases away from the Sun."]],"learnMore":"A comet may display a curved dust tail and a straighter ion tail. Their directions depend on the Sun, not necessarily on the comet's direction of travel."}}
+}
